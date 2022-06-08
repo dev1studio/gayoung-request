@@ -1,6 +1,125 @@
 import React, { useState, useEffect } from "react";
-import songList from "./songs"
-import styles from '../styles/Home.module.css'
+import songList from "./songs";
+import styles from '../styles/Home.module.sass';
+import styled from '@emotion/styled';
+import { colors, mixin, mq, Rem } from '../styles/designSystem';
+
+const Container = styled.div({
+  width: '100%',
+  background: `url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png) no-repeat 50% -100px/cover`,
+})
+
+const Contents = styled.div({
+  ...mixin.widthSettings,
+})
+
+const HeadingContainer = styled.header({
+  width: '100%',
+})
+
+const FooterContainer = styled.footer({
+  backgroundColor: colors.background,
+  width: '100%',
+})
+
+const SearchContainer = styled.main({
+  backgroundColor: colors.white,
+  position: 'relative',
+  '&::before': {
+    content: "''",
+    position: 'absolute',
+    top: Rem(-90),
+    left: 0,
+    width: '100%',
+    height: Rem(200),
+    transform: 'skewY(-5deg)',
+    backgroundColor: colors.white,
+  },
+})
+
+const Heading = styled.div({
+  paddingTop: Rem(100),
+  [mq.maxTablet]: {
+    paddingTop: Rem(50),
+  },
+  '& h1': {
+    fontSize: Rem(70),
+    [mq.maxTablet]: {
+      fontSize: '10vw',
+    },
+  },
+})
+
+const Notice = styled.div({
+  margin: `${Rem(50)} 0 ${Rem(300)}`,
+  [mq.maxTablet]: {
+    margin: `${Rem(20)} 0`,
+  },
+})
+
+const SearchForm = styled.div({
+  backgroundColor: colors.white,
+})
+
+const Search = styled.input({
+  display: 'block',
+  margin: `0 ${Rem(-15)}`,
+  padding: `0 ${Rem(20)}`,
+  width: `calc(100% + ${Rem(30)})`,
+  height: Rem(100),
+  fontSize: Rem(50),
+  [mq.maxTablet]: {
+    fontSize: '5vw',
+  },
+})
+
+const List = styled.ul({
+  padding: `${Rem(20)} 0`,
+  [mq.minXsmall]: {
+    padding: `${Rem(50)} 0`,
+  },
+  '& li': {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: `${Rem(10)} 0`,
+    fontSize: Rem(20),
+  },
+})
+
+const Summary = styled.div({
+  display: 'flex',
+})
+
+const Thumbnail = styled.div(({ thumbnail }) => ({
+  width: Rem(100),
+  height: Rem(100),
+  '& i': {
+    display: 'block',
+    width: '100%',
+    height: '100%',
+    background: `url(${thumbnail}) no-repeat 50% 50%/cover`,
+  },
+}))
+
+const Info = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  paddingLeft: Rem(20),
+  '& strong': {
+    paddingBottom: Rem(15),
+    fontSize: Rem(22),
+  },
+  '& em': {
+    fontSize: Rem(18),
+  },
+})
+
+const Album = styled.small({
+  fontSize: Rem(16),
+  fontFamily: "'Noto Serif KR', serif",
+});
 
 export default function Home() {
   const [songs, setSongs] = useState([]);
@@ -25,17 +144,55 @@ export default function Home() {
   };
 
   return (
-    <div className="App">
-      <input
-        type="search"
-        placeholder="가수명 또는 노래 제목 입력"
-        onChange={e => setSearch(e.target.value)}
-      />
-      {filteredList(songs, search).map(song => (
-        <div key={song.id}>
-          {song.singer} - {song.title} ({song.album})
-        </div>
-      ))}
-    </div>
+    <Container className={styles.container}>
+      <HeadingContainer className={styles['header-contents']}>
+        <Contents>
+          <Heading><h1>가영아 노래 불러줘~*</h1></Heading>
+          <Notice>
+            <p><strong>가수명</strong> 또는 <strong>곡명</strong>으로 검색이 가능합니다.</p>
+            <p><strong>초성 검색</strong>은 지원하지 않으며, <strong>앨범명</strong>으로는 검색 불가합니다.</p>
+            <p>국문인 경우 띄어쓰기를 하지 않습니다 (e.g. 아빠컵엄마컵애기컵송)</p>
+            <p>단, 영문인 경우에는 띄어쓰기를 해주세요.</p>
+            <p>일본곡인 경우 국문, 영문, 일본어 모두 지원합니다.</p>
+            <p><strong>검색 전용입니다. 곡 신청은 직접 앤가영에게!</strong></p>
+          </Notice>
+        </Contents>
+      </HeadingContainer>
+      <SearchContainer>
+        <Contents className={styles['search-contents']}>
+          <SearchForm>
+            <Search
+              type="search"
+              placeholder="찾는 곡을 입력하세요"
+              onChange={e => setSearch(e.target.value)}
+            />
+            <List>
+              {filteredList(songs, search).map(song => (
+                <li key={song.id}>
+                  <Summary>
+                    <Thumbnail thumbnail={song.thumbnail}>
+                      <i />
+                    </Thumbnail>
+                    <Info>
+                      <strong>{song.title}</strong>
+                      <em>{song.singer}</em>
+                    </Info>
+                  </Summary>
+                  <Album>{song.album}</Album>
+                </li>
+              ))}
+            </List>
+          </SearchForm>
+        </Contents>
+      </SearchContainer>
+      <FooterContainer className={styles['footer-contents']}>
+        <Contents>
+          <p>이곳은 앤가영이 부를 수 있는 곡을 안내하는 곳입니다.</p>
+          <p>신청 기능 또는 노래 듣기 기능은 없습니다.</p>
+          <p>앤가영이 부를 수 있는 곡이 생길 때마다 업데이트 됩니다.</p>
+          <strong>제작: 끌로에 * 이미지: 앤가영</strong>
+        </Contents>
+      </FooterContainer>
+    </Container>
   );
 }

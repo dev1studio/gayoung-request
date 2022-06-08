@@ -1,0 +1,90 @@
+$padding-horizontal: 15
+$default-width: 769
+$total-width: $padding-horizontal * 2 + $default-width
+
+$browser-context: 16
+
+$color-black: #000
+$color-white: #FFF
+$color-default: #2d2a26
+$color-accent: #dc2697
+$color-important: #410099
+$color-background: #d75d73
+
+@function rem($pixel, $context: $browser-context)
+  @return #{$pixel/$context}rem
+
+@function em($pixel, $context: $browser-context)
+  @return #{$pixel/$context}em
+
+=mq($mediaquery)
+  @if $mediaquery == maxMobile
+    @media screen and (max-width: rem(480))
+      @content
+
+  @if $mediaquery == minTablet
+    @media screen and (min-width: rem(481))
+      @content
+
+  @if $mediaquery == maxTablet
+    @media screen and (max-width: rem(768))
+      @content
+
+  @if $mediaquery == minXsmall
+    @media screen and (min-width: rem(769))
+      @content
+
+=mixin($style)
+  @if $style == widthSettings
+    margin: 0 auto
+    padding-right: rem(padding-horizontal)
+    padding-left: rem(padding-horizontal)
+    width: 100%
+    max-width: rem(total-width)
+
+  @if $style == col
+    display: block
+    flex: 1 0 0%
+    width: 100%
+    max-width: 100%
+
+  @if $style == colAuto
+    flex: 0 0 auto
+    width: auto
+
+  @if $style == ellipsis
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+  @if $style == clearfix
+    &::after
+      display: block
+      clear: both
+      content: ''
+
+  @if $style == screenReaderOnly
+    position: absolute
+    overflow: hidden
+    margin: 0
+    width: 1px
+    height: 1px
+    clip: rect(1px, 1px, 1px, 1px)
+
+  @if $style == visuallyHiddenFocuable
+    position: absolute
+    overflow: hidden
+    z-index: 20
+    margin: 0
+    width: auto
+    height: auto
+    clip: auto
+
+=clamp($line, $maxheight, $lineheight)
+  overflow: hidden
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: $line
+  max-height: rem($maxheight)
+  line-height: $lineheight

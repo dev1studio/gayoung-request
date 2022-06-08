@@ -1,0 +1,70 @@
+@import './designSystem.sass'
+
+.container
+  .header-contents
+    h1
+      font-family: 'Cute Font', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', cursive
+      color: $color-white
+
+    p
+      margin-left: rem(20)
+      font-weight: 700
+      font-size: rem(20)
+      line-height: 1.5
+      color: rgba($color-white, .7)
+      display: list-item
+      list-style: outside
+
+      strong
+        font-weight: 900
+        color: $color-white
+
+  .search-contents
+    position: relative
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12)
+    top: rem(-200)
+    background: $color-white
+
+    input
+      border: 0
+      background-color: $color-white
+      font-weight: 700
+      color: $color-accent
+      text-align: center
+
+      &::placeholder
+        color: $color-background
+        font-weight: 900
+
+      &:focus
+        outline: rem(5) solid $color-important
+
+    ul
+      padding-right: rem(50)
+      padding-left: rem(50)
+
+      li
+        strong
+          font-weight: 900
+          color: $color-important
+
+        em
+          font-weight: 700
+
+        small
+          color: rgba($color-default, .7)
+
+.footer-contents
+  padding: rem(20) 0
+
+  p
+    margin: rem(5) 0
+    font-weight: 700
+    font-size: rem(18)
+    color: $color-white
+
+  strong
+    display: block
+    padding-top: rem(20)
+    font-weight: 900
+    color: $color-white
