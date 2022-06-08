@@ -6,7 +6,7 @@ import { colors, mixin, mq, Rem } from '../styles/designSystem';
 
 const Container = styled.div({
   width: '100%',
-  background: `url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png) no-repeat 50% -100px/cover`,
+  background: `url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
 })
 
 const Contents = styled.div({
@@ -154,7 +154,10 @@ export default function Home() {
             <p>국문인 경우 띄어쓰기를 하지 않습니다 (e.g. 아빠컵엄마컵애기컵송)</p>
             <p>단, 영문인 경우에는 띄어쓰기를 해주세요.</p>
             <p>일본곡인 경우 국문, 영문, 일본어 모두 지원합니다.</p>
+            <p>약어/약자 검색 지원합니다. (e.g. bts, bol4, 볼4, 블핑 등.)</p>
             <p><strong>검색 전용입니다. 곡 신청은 직접 앤가영에게!</strong></p>
+            <p>Please be careful of spacing when searching songs in English. Supports searching for singer names and song titles.</p>
+            <p>J-pop/Anime OSTは英文と日本語両方に対応しています。（曲数が多くありません。すみません。）</p>
           </Notice>
         </Contents>
       </HeadingContainer>
