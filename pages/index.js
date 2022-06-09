@@ -6,7 +6,8 @@ import { colors, mixin, mq, Rem } from '../styles/designSystem';
 
 const Container = styled.div({
   width: '100%',
-  background: `url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
+  position: 'relative',
+  background: `${colors.background} url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
 })
 
 const Contents = styled.div({
@@ -39,21 +40,24 @@ const SearchContainer = styled.main({
 
 const Heading = styled.div({
   paddingTop: Rem(100),
-  [mq.maxTablet]: {
+  [mq.maxLarge]: {
     paddingTop: Rem(50),
   },
   '& h1': {
     fontSize: Rem(70),
+    [mq.maxLarge]: {
+      fontSize: '5.5vw',
+    },
     [mq.maxTablet]: {
-      fontSize: '10vw',
+      fontSize: Rem(37),
     },
   },
 })
 
 const Notice = styled.div({
   margin: `${Rem(50)} 0 ${Rem(300)}`,
-  [mq.maxTablet]: {
-    margin: `${Rem(20)} 0`,
+  [mq.maxLarge]: {
+    margin: `${Rem(20)} 0 ${Rem(250)}`,
   },
 })
 
@@ -68,20 +72,26 @@ const Search = styled.input({
   width: `calc(100% + ${Rem(30)})`,
   height: Rem(100),
   fontSize: Rem(50),
+  [mq.maxLarge]: {
+    height: '7.9vw',
+    fontSize: '3.9vw',
+  },
   [mq.maxTablet]: {
-    fontSize: '5vw',
+    height: Rem(60),
+    fontSize: Rem(30),
   },
 })
 
 const List = styled.ul({
   padding: `${Rem(20)} 0`,
-  [mq.minXsmall]: {
+  [mq.minXlarge]: {
     padding: `${Rem(50)} 0`,
   },
   '& li': {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    position: 'relative',
     padding: `${Rem(10)} 0`,
     fontSize: Rem(20),
   },
@@ -92,8 +102,12 @@ const Summary = styled.div({
 })
 
 const Thumbnail = styled.div(({ thumbnail }) => ({
-  width: Rem(100),
-  height: Rem(100),
+  width: Rem(120),
+  height: Rem(120),
+  [mq.minXsmall]: {
+    width: Rem(100),
+    height: Rem(100),
+  },
   '& i': {
     display: 'block',
     width: '100%',
@@ -103,22 +117,51 @@ const Thumbnail = styled.div(({ thumbnail }) => ({
 }))
 
 const Info = styled.div({
+  ...mixin.col,
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center',
   paddingLeft: Rem(20),
+  [mq.minXlarge]: {
+    justifyContent: 'center',
+  },
   '& strong': {
-    paddingBottom: Rem(15),
-    fontSize: Rem(22),
+    paddingBottom: Rem(5),
+    fontSize: Rem(16),
+    [mq.maxTablet]: {
+      lineHeight: '1.3',
+    },
+    [mq.minXsmall]: {
+      fontSize: Rem(22),
+    },
+    [mq.minXlarge]: {
+      paddingBottom: Rem(15),
+    },
   },
   '& em': {
-    fontSize: Rem(18),
+    fontSize: Rem(14),
+    [mq.maxTablet]: {
+      lineHeight: '1.3',
+    },
+    [mq.minXsmall]: {
+      fontSize: Rem(18),
+    },
   },
 })
 
 const Album = styled.small({
-  fontSize: Rem(16),
+  fontSize: Rem(12),
   fontFamily: "'Noto Serif KR', serif",
+  [mq.minXsmall]: {
+    fontSize: Rem(16),
+  },
+  [mq.maxXsmall]: {
+    position: 'absolute',
+    bottom: Rem(15),
+    left: Rem(120),
+  },
+  [mq.maxTablet]: {
+    left: Rem(140)
+  },
 });
 
 export default function Home() {
@@ -157,7 +200,7 @@ export default function Home() {
             <p>약어/약자 검색 지원합니다. (e.g. bts, bol4, 볼4, 블핑 등.)</p>
             <p><strong>검색 전용입니다. 곡 신청은 직접 앤가영에게!</strong></p>
             <p>Please be careful of spacing when searching songs in English. Supports searching for singer names and song titles.</p>
-            <p>J-pop/Anime OSTは英文と日本語両方に対応しています。（曲数が多くありません。すみません。）</p>
+            <p>J-pop/Anime OSTは英文と日本語両方に対応しています。 （曲数が多くありません。すみません。）</p>
           </Notice>
         </Contents>
       </HeadingContainer>
