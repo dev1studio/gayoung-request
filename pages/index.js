@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import songList from "./songs";
+import songList from "../components/songs";
 import styles from '../styles/Home.module.sass';
 import styled from '@emotion/styled';
 import { colors, mixin, mq, Rem } from '../styles/designSystem';
