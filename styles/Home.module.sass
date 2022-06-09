@@ -7,13 +7,16 @@
       color: $color-white
 
     p
+      display: list-item
       margin-left: rem(20)
+      list-style: outside
       font-weight: 700
-      font-size: rem(20)
+      font-size: rem(16)
       line-height: 1.5
       color: rgba($color-white, .7)
-      display: list-item
-      list-style: outside
+
+      +mq(minXlarge)
+        font-size: rem(20)
 
       strong
         font-weight: 900
@@ -21,16 +24,22 @@
 
   .search-contents
     position: relative
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12)
     top: rem(-200)
     background: $color-white
+
+    +mq(minXlarge)
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12)
 
     input
       border: 0
       background-color: $color-white
+      position: sticky
+      top: 0
+      z-index: 9
+      outline: rem(5) solid $color-background
       font-weight: 700
-      color: $color-accent
       text-align: center
+      color: $color-important
 
       &::placeholder
         color: $color-background
@@ -40,8 +49,12 @@
         outline: rem(5) solid $color-important
 
     ul
-      padding-right: rem(50)
-      padding-left: rem(50)
+      padding-right: rem(15)
+      padding-left: rem(15)
+
+      +mq(minXlarge)
+        padding-right: rem(50)
+        padding-left: rem(50)
 
       li
         strong
@@ -56,6 +69,12 @@
 
 .footer-contents
   padding: rem(20) 0
+
+  +mq(maxLarge)
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
 
   p
     margin: rem(5) 0

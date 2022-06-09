@@ -1,5 +1,5 @@
 $padding-horizontal: 15
-$default-width: 769
+$default-width: 1250
 $total-width: $padding-horizontal * 2 + $default-width
 
 $browser-context: 16
@@ -32,6 +32,30 @@ $color-background: #d75d73
 
   @if $mediaquery == minXsmall
     @media screen and (min-width: rem(769))
+      @content
+
+  @if $mediaquery == maxXsmall
+    @media screen and (max-width: rem(1024))
+      @content
+
+  @if $mediaquery == minSmall
+    @media screen and (min-width: rem(1025))
+      @content
+
+  @if $mediaquery == maxSmall
+    @media screen and (max-width: rem(1200))
+      @content
+
+  @if $mediaquery == minLarge
+    @media screen and (min-width: rem(1201))
+      @content
+
+  @if $mediaquery == maxLarge
+    @media screen and (max-width: rem(1280))
+      @content
+
+  @if $mediaquery == minXlarge
+    @media screen and (min-width: rem(1281))
       @content
 
 =mixin($style)
