@@ -6,9 +6,6 @@ import { colors, mixin, mq, Rem } from '../styles/designSystem';
 
 const Container = styled.div({
   width: '100%',
-  minHeight: '100vh',
-  position: 'relative',
-  background: `${colors.background} url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
 })
 
 const Contents = styled.div({
@@ -17,11 +14,27 @@ const Contents = styled.div({
 
 const HeadingContainer = styled.header({
   width: '100%',
+  position: 'relative',
+  overflow: 'hidden',
+  backgroundColor: colors.background,
+  '&::before': {
+    content: "''",
+    display: 'block',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    paddingTop: '66.66666667%',
+    width: '100%',
+    height: 0,
+    background: `${colors.background} url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
+  },
 })
 
 const FooterContainer = styled.footer({
-  backgroundColor: colors.background,
   width: '100%',
+  [mq.minXlarge]: {
+    backgroundColor: colors.background,
+  },
 })
 
 const SearchContainer = styled.main({

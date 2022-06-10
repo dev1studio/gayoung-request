@@ -2,6 +2,11 @@
 
 .container
   .header-contents
+
+    & > div
+      position: relative
+      z-index: 1
+
     h1
       font-family: 'Cute Font', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', cursive
       color: $color-white
@@ -74,16 +79,18 @@
     margin: rem(5) 0
     font-weight: 700
     font-size: rem(14)
-    color: $color-white
+    color: $color-background
 
     +mq(minXlarge)
-      font-size: rem(18)
+      font-size: rem(16)
+      color: $color-white
 
   strong
     display: block
     padding-top: rem(20)
     font-weight: 900
-    color: $color-white
+    color: $color-accent
 
     +mq(minXlarge)
       font-size: rem(14)
+      color: $color-white
