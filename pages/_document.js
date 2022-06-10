@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="ko-KR">
         <Head>
           <link
             rel="preconnect"
@@ -17,6 +17,22 @@ class MyDocument extends Document {
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
+          />
+          <link
+            rel="icon"
+            href="/favicon.ico"
+          />
+          <link
+            rel="manifest"
+            href="/manifest.json"
+          />
+          <link
+            rel="apple-touch-icon"
+            href="/icon-192x192.png"
+          />
+          <meta
+            name="theme-color"
+            content="#fff"
           />
         </Head>
         <body>

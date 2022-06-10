@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from 'next/head';
 import songList from "../components/songs";
 import styles from '../styles/Home.module.sass';
 import styled from '@emotion/styled';
@@ -202,60 +203,80 @@ export default function Home() {
     return songs.filter(song => bySearch(song, search));
   };
 
+  const domain = `https://gayoung-request.vercel.app/`
+
   return (
-    <Container className={styles.container}>
-      <HeadingContainer className={styles['header-contents']}>
-        <Contents>
-          <Heading><h1>가영아 노래 불러줘~*</h1></Heading>
-          <Notice>
-            <p><strong>가수명</strong> 또는 <strong>곡명</strong>으로 검색이 가능합니다.</p>
-            <p><strong>초성 검색</strong>은 지원하지 않으며, <strong>앨범명</strong>으로는 검색 불가합니다.</p>
-            <p>국문인 경우 띄어쓰기를 하지 않습니다 (e.g. 아빠컵엄마컵애기컵송)</p>
-            <p>단, 영문인 경우에는 띄어쓰기를 해주세요.</p>
-            <p>일본곡인 경우 국문, 영문, 일본어 모두 지원합니다.</p>
-            <p>약어/약자 검색 지원합니다. (e.g. bts, bol4, 볼4, 블핑 등.)</p>
-            <p><strong>검색 전용입니다. 곡 신청은 직접 앤가영에게!</strong></p>
-            <p>Please be careful of spacing when searching songs in English. Supports searching for singer names and song titles.</p>
-            <p>J-pop/Anime OSTは英文と日本語両方に対応しています。 （曲数が多くありません。すみません。）</p>
-          </Notice>
-        </Contents>
-      </HeadingContainer>
-      <SearchContainer>
-        <Contents className={styles['search-contents']}>
-          <SearchForm>
-            <Search
-              type="search"
-              placeholder="찾는 곡을 입력하세요"
-              onChange={e => setSearch(e.target.value)}
-            />
-            <List>
-              {filteredList(songs, search).map(song => (
-                <li key={song.id}>
-                  <Summary>
-                    <Thumbnail thumbnail={song.thumbnail}>
-                      <i />
-                    </Thumbnail>
-                    <Info>
-                      <strong>{song.title}</strong>
-                      <em>{song.singer}</em>
-                    </Info>
-                  </Summary>
-                  <Album>{song.album}</Album>
-                </li>
-              ))}
-            </List>
-          </SearchForm>
-        </Contents>
-      </SearchContainer>
-      <FooterContainer className={styles['footer-contents']}>
-        <Contents>
-          <p>이곳은 앤가영이 부를 수 있는 곡을 안내하는 곳입니다.</p>
-          <p>신청 기능 또는 노래 듣기 기능은 없습니다.</p>
-          <p>앤가영이 부를 수 있는 곡이 생길 때마다 업데이트 됩니다.</p>
-          <p>라이브 방송: 매주 월요일 20시 `가영아 노래 불러줘` 유튜브 채널</p>
-          <strong>제작: 끌로에 * 이미지: 앤가영</strong>
-        </Contents>
-      </FooterContainer>
-    </Container>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel='canonical' href={domain} />
+        <meta name='format-detection' content='telephone=no' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
+        <title>가영아 노래 불러줘~*</title>
+        <meta name='description' content={'앤가영에게 노래를 신청해 보아요'} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property='og:title' content={'가영아 노래 불러줘~*'} />
+        <meta property='og:description' content={'앤가영에게 노래를 신청해 보아요'} />
+        <meta property='og:url' content={domain} />
+        <meta property='og:locale' content={'ko_KR'} />
+        <meta property='og:image' content={`${domain}og.png?${(Math.random() * 7).toString(7)}`} />
+        <meta property='og:type' content='website' />
+        <meta property='og:site_name' content={'가영아 노래 불러줘~*'} />
+      </Head>
+      <Container className={styles.container}>
+        <HeadingContainer className={styles['header-contents']}>
+          <Contents>
+            <Heading><h1>가영아 노래 불러줘~*</h1></Heading>
+            <Notice>
+              <p><strong>가수명</strong> 또는 <strong>곡명</strong>으로 검색이 가능합니다.</p>
+              <p><strong>초성 검색</strong>은 지원하지 않으며, <strong>앨범명</strong>으로는 검색 불가합니다.</p>
+              <p>국문인 경우 띄어쓰기를 하지 않습니다 (e.g. 아빠컵엄마컵애기컵송)</p>
+              <p>단, 영문인 경우에는 띄어쓰기를 해주세요.</p>
+              <p>일본곡인 경우 국문, 영문, 일본어 모두 지원합니다.</p>
+              <p>약어/약자 검색 지원합니다. (e.g. bts, bol4, 볼4, 블핑 등.)</p>
+              <p><strong>검색 전용입니다. 곡 신청은 직접 앤가영에게!</strong></p>
+              <p>Please be careful of spacing when searching songs in English. Supports searching for singer names and song titles.</p>
+              <p>J-pop/Anime OSTは英文と日本語両方に対応しています。 （曲数が多くありません。すみません。）</p>
+            </Notice>
+          </Contents>
+        </HeadingContainer>
+        <SearchContainer>
+          <Contents className={styles['search-contents']}>
+            <SearchForm>
+              <Search
+                type="search"
+                placeholder="찾는 곡을 입력하세요"
+                onChange={e => setSearch(e.target.value)}
+              />
+              <List>
+                {filteredList(songs, search).map(song => (
+                  <li key={song.id}>
+                    <Summary>
+                      <Thumbnail thumbnail={song.thumbnail}>
+                        <i />
+                      </Thumbnail>
+                      <Info>
+                        <strong>{song.title}</strong>
+                        <em>{song.singer}</em>
+                      </Info>
+                    </Summary>
+                    <Album>{song.album}</Album>
+                  </li>
+                ))}
+              </List>
+            </SearchForm>
+          </Contents>
+        </SearchContainer>
+        <FooterContainer className={styles['footer-contents']}>
+          <Contents>
+            <p>이곳은 앤가영이 부를 수 있는 곡을 안내하는 곳입니다.</p>
+            <p>신청 기능 또는 노래 듣기 기능은 없습니다.</p>
+            <p>앤가영이 부를 수 있는 곡이 생길 때마다 업데이트 됩니다.</p>
+            <p>라이브 방송: 매주 월요일 20시 `가영아 노래 불러줘` 유튜브 채널</p>
+            <strong>제작: 끌로에 * 이미지: 앤가영</strong>
+          </Contents>
+        </FooterContainer>
+      </Container>
+    </>
   );
 }
