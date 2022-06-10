@@ -6,8 +6,6 @@ import { colors, mixin, mq, Rem } from '../styles/designSystem';
 
 const Container = styled.div({
   width: '100%',
-  position: 'relative',
-  background: `${colors.background} url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
 })
 
 const Contents = styled.div({
@@ -16,25 +14,43 @@ const Contents = styled.div({
 
 const HeadingContainer = styled.header({
   width: '100%',
+  position: 'relative',
+  overflow: 'hidden',
+  backgroundColor: colors.background,
+  '&::before': {
+    content: "''",
+    display: 'block',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    paddingTop: '66.66666667%',
+    width: '100%',
+    height: 0,
+    background: `${colors.background} url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
+  },
 })
 
 const FooterContainer = styled.footer({
-  backgroundColor: colors.background,
   width: '100%',
+  [mq.minXlarge]: {
+    backgroundColor: colors.background,
+  },
 })
 
 const SearchContainer = styled.main({
   backgroundColor: colors.white,
-  position: 'relative',
-  '&::before': {
-    content: "''",
-    position: 'absolute',
-    top: Rem(-90),
-    left: 0,
-    width: '100%',
-    height: Rem(200),
-    transform: 'skewY(-5deg)',
-    backgroundColor: colors.white,
+  [mq.minXlarge]: {
+    position: 'relative',
+    '&::before': {
+      content: "''",
+      position: 'absolute',
+      top: Rem(-90),
+      left: 0,
+      width: '100%',
+      height: Rem(200),
+      transform: 'skewY(-5deg)',
+      backgroundColor: colors.white,
+    },
   },
 })
 
@@ -55,9 +71,9 @@ const Heading = styled.div({
 })
 
 const Notice = styled.div({
-  margin: `${Rem(50)} 0 ${Rem(300)}`,
-  [mq.maxLarge]: {
-    margin: `${Rem(20)} 0 ${Rem(250)}`,
+  margin: `${Rem(20)} 0 ${Rem(50)}`,
+  [mq.minXlarge]: {
+    margin: `${Rem(50)} 0 ${Rem(300)}`,
   },
 })
 
@@ -236,6 +252,7 @@ export default function Home() {
           <p>이곳은 앤가영이 부를 수 있는 곡을 안내하는 곳입니다.</p>
           <p>신청 기능 또는 노래 듣기 기능은 없습니다.</p>
           <p>앤가영이 부를 수 있는 곡이 생길 때마다 업데이트 됩니다.</p>
+          <p>라이브 방송: 매주 월요일 20시 `가영아 노래 불러줘` 유튜브 채널</p>
           <strong>제작: 끌로에 * 이미지: 앤가영</strong>
         </Contents>
       </FooterContainer>
