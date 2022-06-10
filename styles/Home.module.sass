@@ -23,11 +23,11 @@
         color: $color-white
 
   .search-contents
-    position: relative
-    top: rem(-200)
     background: $color-white
 
     +mq(minXlarge)
+      position: relative
+      top: rem(-200)
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12)
 
     input
@@ -70,20 +70,20 @@
 .footer-contents
   padding: rem(20) 0
 
-  +mq(maxLarge)
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-
   p
     margin: rem(5) 0
     font-weight: 700
-    font-size: rem(18)
+    font-size: rem(14)
     color: $color-white
+
+    +mq(minXlarge)
+      font-size: rem(18)
 
   strong
     display: block
     padding-top: rem(20)
     font-weight: 900
     color: $color-white
+
+    +mq(minXlarge)
+      font-size: rem(14)
