@@ -679,7 +679,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "5th Album 'LILAC' (2021)",
     title: "Celebrity",
-    thumbnail: `/4550593.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/5211473.jpeg?${(Math.random() * 7).toString(7)}`,
   },
   {
     id: uuidv4(),
