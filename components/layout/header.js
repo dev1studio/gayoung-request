@@ -3,18 +3,20 @@ import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
 import styles from '../../styles/Header.module.sass';
 import { colors, mixin, mq, Rem } from '../../styles/designSystem';
+import LinkButton from '../utilities/linkButton';
+import ToggleNavigation from './toggleNavigation';
+import GlobalNavigation from './globalNavigation';
 
 const Contents = styled.div({
   ...mixin.widthSettings,
 })
 
-const HeadingContainer = styled.header({
+const HeadingContainer = styled.header(({ open }) => ({
   width: '100%',
   position: 'relative',
   overflow: 'hidden',
   backgroundColor: colors.background,
-  '&::before': {
-    content: "''",
+  '& > i': {
     display: 'block',
     position: 'absolute',
     top: 0,
@@ -24,7 +26,21 @@ const HeadingContainer = styled.header({
     height: 0,
     background: `${colors.background} url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
   },
-})
+  [mq.maxTablet]: {
+    '&::before': {
+      content: open ? '""' : null,
+      display: open ? 'block' : null,
+      width: open ? `calc(100% - ${Rem(270)})` : '100%',
+      height: '100%',
+      position: open ? 'fixed' : null,
+      top: 0,
+      left: 0,
+      backgroundColor: 'rgba(34, 34, 34, .5)',
+      zIndex: '99',
+      transition: 'all .25s linear',
+    },
+  },
+}));
 
 const Subject = styled.h2({
   backgroundColor: colors.white,
@@ -59,13 +75,48 @@ const Notice = styled.div({
   },
 })
 
+const useOnClickOutside = (ref, handler) => {
+  React.useEffect(() => {
+    const listener = event => {
+      if (!ref.current || ref.current.contains(event.target)) return;
+      handler(event);
+    };
+    document.addEventListener("mousedown", listener);
+
+    return () => {
+      document.removeEventListener("mousedown", listener);
+    };
+  }, [ref, handler]);
+};
+
 function Header() {
   const router = useRouter()
 
+  const [open, setOpen] = React.useState(false);
+  const node = React.useRef();
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
-    <HeadingContainer className={styles['header-contents']}>
+    <HeadingContainer
+      className={styles['header-contents']}
+      open={open}
+    >
+      <i />
       <Contents>
         <Heading><h1>가영아 노래 불러줘~*</h1></Heading>
+        <div
+          className={styles['nav-container']}
+          ref={node}
+        >
+          <ToggleNavigation
+            open={open}
+            setOpen={setOpen}
+          />
+          <GlobalNavigation
+            open={open}
+            setOpen={setOpen}
+          />
+        </div>
         {router.pathname === '/' ?
           <>
             <Subject>곡 검색 only ON AIR</Subject>

@@ -1,7 +1,70 @@
 @import './designSystem.sass'
 
 .header-contents
-  & > div
+  nav
+    ul
+      display: flex
+      justify-content: flex-end
+
+      +mq(maxTablet)
+        padding-top: rem(15)
+
+      +mq(minXsmall)
+        padding-left: rem(35)
+
+      a
+        display: block
+        width: 38px
+        height: 38px
+
+        i
+          display: block
+          background-repeat: no-repeat
+          background-position: 50% 50%
+          background-size: contain
+          filter: invert(44%) sepia(55%) saturate(581%) hue-rotate(299deg) brightness(95%) contrast(89%)
+          width: 100%
+          height: 100%
+
+          +mq(minXsmall)
+            filter: invert(0%) sepia(0%) saturate(7486%) hue-rotate(340deg) brightness(99%) contrast(106%)
+
+    +mq(maxTablet)
+      padding: rem(70) rem(15) rem(20)
+
+      ol
+        display: flex
+        flex-direction: column
+
+        li
+          margin: rem(5) 0
+
+        a
+          display: flex
+          justify-content: flex-end
+          border-radius: rem(5)
+          padding: rem(10) rem(20)
+          font-family: "Cute Font", -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Nanum Gothic", "Malgun Gothic", cursive
+          font-size: rem(30)
+
+    +mq(minXsmall)
+      display: flex
+      align-items: center
+
+      ol
+        display: flex
+
+        li
+          padding: 0 rem(5)
+
+        a
+          display: flex
+          padding: rem(5) rem(10)
+          font-family: "Cute Font", -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Nanum Gothic", "Malgun Gothic", cursive
+          font-size: rem(30)
+          color: $color-white
+
+  h1, p
     position: relative
     z-index: 1
 
