@@ -1277,6 +1277,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emailjs/browser@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "@emailjs/browser@npm:3.6.2"
+  checksum: 605deffac6b09789a417e68093fc105906a1e75c046cda5de457ea00b0d8a75c1796f2c3ae17362c134669fb54f8a3731a78ca6fdac0bf8a78c2abcea2cb20c0
+  languageName: node
+  linkType: hard
+
 "@emotion/babel-plugin@npm:^11.7.1":
   version: 11.9.2
   resolution: "@emotion/babel-plugin@npm:11.9.2"
@@ -2666,6 +2673,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-defaults@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "dotenv-defaults@npm:2.0.2"
+  dependencies:
+    dotenv: ^8.2.0
+  checksum: c005960bd048e2189c4799e729c41f362e415e6e0b54313d3f31e853a84b049bf770b25cb21c112c2805bb13a8376edc9de451fb514abf8546392d327c27f6e5
+  languageName: node
+  linkType: hard
+
+"dotenv-webpack@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "dotenv-webpack@npm:7.1.0"
+  dependencies:
+    dotenv-defaults: ^2.0.2
+  peerDependencies:
+    webpack: ^4 || ^5
+  checksum: e69f5b5de16f99a0acc35f2bc75e1dd40a587053cdb62ffb2fe80cea197ba703a829771f6db270a01e96ca8f52c8160671c243875a7b9c7c040bc32fc3d400f1
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^8.2.0":
+  version: 8.6.0
+  resolution: "dotenv@npm:8.6.0"
+  checksum: 38e902c80b0666ab59e9310a3d24ed237029a7ce34d976796349765ac96b8d769f6df19090f1f471b77a25ca391971efde8a1ea63bb83111bd8bec8e5cc9b2cd
+  languageName: node
+  linkType: hard
+
 "ejs@npm:^3.1.6":
   version: 3.1.8
   resolution: "ejs@npm:3.1.8"
@@ -3313,8 +3347,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gayoung-request@workspace:."
   dependencies:
+    "@emailjs/browser": ^3.6.2
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
+    dotenv-webpack: ^7.1.0
     eslint: 8.17.0
     eslint-config-next: 12.1.6
     next: 12.1.6
@@ -3323,6 +3359,7 @@ __metadata:
     prop-types: ^15.8.1
     react: 18.1.0
     react-dom: 18.1.0
+    react-hook-form: ^7.32.0
     sass: ^1.50.0
     uuid: ^8.3.2
   languageName: unknown
@@ -4929,6 +4966,15 @@ __metadata:
   peerDependencies:
     react: ^18.1.0
   checksum: bb0d48eeb0b297c79c2a03978baa29f5b3ff7ba3d070b21e34c9af1a6e7fdf0ca8b8d73e41f9214d91ad40eeb6d1f3559f884cbbc338713374a51320637c23df
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.32.0":
+  version: 7.32.0
+  resolution: "react-hook-form@npm:7.32.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 2342ca3b3fd19772fc8167eab578e9c95eb44d73fa87e29e0d1228c6412cbf306ac014ba2ad60fdb5750ab32173193231052fa40a5684db65602d82a437ed10d
   languageName: node
   linkType: hard
 
