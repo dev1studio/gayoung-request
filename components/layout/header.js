@@ -129,7 +129,7 @@ function Header() {
               <p>약어/약자 검색 지원합니다. (e.g. bts, bol4, 볼4, 블핑 등.)</p>
               <p><strong>검색 전용입니다. 곡 신청은 라방에서 앤가영에게!</strong></p>
               <p lang='en'>Please be careful of spacing when searching songs in English. Supports searching for singer names and song titles.</p>
-              <p lang='ja'>J-pop/Anime OSTは英文と日本語両方に対応しています。 （曲数が多くありません。すみません。）</p>
+              <p lang='ja'>J-pop/Anime OSTは英文と日本語両方に対応しています。（曲数が多くありません。すみません。）</p>
             </Notice>
           </>
           : null
