@@ -1,0 +1,26 @@
+@import './designSystem.sass'
+
+.footer-contents
+  padding: rem(50) 0
+
+  p
+    margin: rem(5) 0
+    font-weight: 700
+    font-size: rem(14)
+    color: $color-background
+
+    +mq(minXlarge)
+      font-size: rem(16)
+      color: $color-white
+
+    & ~ strong
+      padding-top: rem(20)
+
+  strong
+    display: block
+    font-weight: 900
+    color: $color-accent
+
+    +mq(minXlarge)
+      font-size: rem(14)
+      color: $color-white

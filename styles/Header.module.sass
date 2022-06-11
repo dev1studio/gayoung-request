@@ -1,0 +1,26 @@
+@import './designSystem.sass'
+
+.header-contents
+  & > div
+    position: relative
+    z-index: 1
+
+  h1
+    font-family: 'Cute Font', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', cursive
+    color: $color-white
+
+  p
+    display: list-item
+    margin-left: rem(20)
+    list-style: outside
+    font-weight: 700
+    font-size: rem(16)
+    line-height: 1.5
+    color: rgba($color-white, .7)
+
+    +mq(minXlarge)
+      font-size: rem(20)
+
+    strong
+      font-weight: 900
+      color: $color-white

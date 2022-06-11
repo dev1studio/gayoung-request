@@ -9,8 +9,29 @@ const Container = styled.div({
   width: '100%',
 })
 
+const RequestContainer = styled.main({
+  backgroundColor: colors.white,
+  [mq.minXlarge]: {
+    position: 'relative',
+    '&::before': {
+      content: "''",
+      position: 'absolute',
+      top: Rem(-90),
+      left: 0,
+      width: '100%',
+      height: Rem(200),
+      transform: 'skewY(-5deg)',
+      backgroundColor: colors.white,
+    },
+  },
+})
+
 const Contents = styled.div({
   ...mixin.widthSettings,
+  padding: Rem(20),
+  [mq.minXlarge]: {
+    padding: Rem(50),
+  },
 })
 
 const FormGroup = styled.div({
@@ -59,17 +80,17 @@ const FormControl = styled.div({
     fontWeight: 900,
     fontSize: Rem(16),
     color: colors.important,
-    transition: 'border .2s linear',
+    transition: 'border .15s linear',
     '&::placeholder': {
-      color: colors.primary,
+      color: colors.background,
     },
     '&:focus': {
-      borderColor: colors.accent,
+      borderColor: colors.important,
     },
     '&:-webkit-autofill': {
-      backgroundColor: `${colors.accent} !important`,
+      backgroundColor: `${colors.background} !important`,
       borderBottom: `3px solid ${colors.important} !important`,
-      color: `${colors.important} !important`,
+      color: `${colors.white} !important`,
     },
   },
 })
@@ -79,14 +100,6 @@ const FormControlInput = styled.input(({ isError }) => ({
   borderBottom: isError ? '2px solid red' : `2px solid ${colors.background}`,
   padding: `0 ${Rem(15)}`,
   height: Rem(68),
-}))
-
-const FormControlTextArea = styled.textarea(({ isError }) => ({
-  border: 'none',
-  borderBottom: isError ? '2px solid red' : `2px solid ${colors.background}`,
-  padding: Rem(15),
-  height: Rem(270),
-  resize: 'none',
 }))
 
 const Error = styled.p({
@@ -105,12 +118,13 @@ const ButtonContainer = styled.div({
 const SubmitButton = styled.button({
   backgroundColor: colors.white,
   border: '2px solid',
+  borderRadius: Rem(5),
   padding: `${Rem(15)} ${Rem(30)}`,
   fontWeight: 700,
   fontSize: Rem(18),
   color: colors.accent,
+  transition: 'all .15s linear',
   '&:hover, &:focus': {
-    transition: 'all .3s linear',
     backgroundColor: colors.accent,
     color: colors.white,
   },
@@ -148,8 +162,8 @@ export default function Request() {
   };
 
   return (
-    <Container>
-      <Contents>
+    <RequestContainer>
+      <Contents className={styles['request-contents']}>
         <form
           ref={form}
           onSubmit={handleSubmit(onSubmit)}
@@ -157,7 +171,7 @@ export default function Request() {
           <fieldset>
             <legend>곡 신청 양식</legend>
             <FormGroup>
-              <FormLabel htmlFor='user'>유튜브 이름 <i mark='&#x204E;' /></FormLabel>
+              <FormLabel htmlFor='user'>YouTube Nickname <i mark='&#x204E;' /></FormLabel>
               <FormControl>
                 <FormControlInput
                   id={'user'}
@@ -177,7 +191,7 @@ export default function Request() {
               </FormControl>
             </FormGroup>
             <FormGroup>
-              <FormLabel htmlFor='singer'>가수명 <i mark='&#x204E;' /></FormLabel>
+              <FormLabel htmlFor='singer'>Singer <i mark='&#x204E;' /></FormLabel>
               <FormControl>
                 <FormControlInput
                   id={'singer'}
@@ -197,7 +211,7 @@ export default function Request() {
               </FormControl>
             </FormGroup>
             <FormGroup>
-              <FormLabel htmlFor='title'>곡명 <i mark='&#x204E;' /></FormLabel>
+              <FormLabel htmlFor='title'>Song<i mark='&#x204E;' /></FormLabel>
               <FormControl>
                 <FormControlInput
                   id={'title'}
@@ -217,11 +231,11 @@ export default function Request() {
               </FormControl>
             </FormGroup>
             <FormGroup>
-              <FormLabel htmlFor='album'>앨범 또는 관련 영상</FormLabel>
+              <FormLabel htmlFor='album'>Album or <br />Related Video URL</FormLabel>
               <FormControl>
                 <FormControlInput
                   id={'album'}
-                  placeholder={'앱범명 또는 관련 영상링크 입력'}
+                  placeholder={'앱범명 또는 관련 영상링크 URL 입력'}
                   type={'text'}
                   aria-invalid={errors.album ? 'true' : null}
                   aria-describedby={errors.album ? 'error-album' : null}
@@ -242,6 +256,6 @@ export default function Request() {
           </fieldset>
         </form>
       </Contents>
-    </Container>
+    </RequestContainer>
   )
 }
