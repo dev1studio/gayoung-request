@@ -128,6 +128,10 @@ const SubmitButton = styled.button({
     backgroundColor: colors.accent,
     color: colors.white,
   },
+  '&:disabled': {
+    backgroundColor: colors.important,
+    opacity: 0.2,
+  },
 })
 
 SubmitButton.defaultProps = {
@@ -155,9 +159,9 @@ export default function Request() {
       EMAILJS_USER_ID
     )
       .then((result) => {
-        alert('Sending succeeded. 보내기 성공하였습니다.');
+        alert('Your song request was successful. 곡 신청에 성공했습니다.');
       }, (error) => {
-        alert('Send failed. Please try again. 보내기 실패하였습니다. 다시 시도해주세요.');
+        alert('Request failed. Please try again. 보내기 실패하였습니다. 다시 시도해주세요.');
       });
   };
 
@@ -250,8 +254,11 @@ export default function Request() {
               </FormControl>
             </FormGroup>
             <p className={styles['notice']}>앨범명은 입력하지 않아도 되지만, 한 가수가 여러 버전으로 부르는 케이스가 있기 때문에 기입해주시면 좋습니다.</p>
+            <p className={styles['notice']}>`곡 신청하기` 버튼은 <strong>1번만</strong> 눌러주세요. 여러번 누르면 제대로 신청되지 않을 수 있습니다.</p>
             <ButtonContainer>
-              <SubmitButton>곡 신청하기</SubmitButton>
+              <SubmitButton>
+                곡 신청하기
+              </SubmitButton>
             </ButtonContainer>
           </fieldset>
         </form>
