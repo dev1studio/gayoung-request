@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import styles from '../styles/Request.module.sass';
 import styled from '@emotion/styled';
+import styles from '../styles/Request.module.sass';
 import { colors, mixin, mq, Rem } from '../styles/designSystem';
+import withHead from '../components/utilities/withHead';
 
 const Container = styled.div({
   width: '100%',
@@ -138,7 +139,7 @@ SubmitButton.defaultProps = {
   type: 'submit',
 }
 
-export default function Request() {
+function Request() {
   const {
     register,
     handleSubmit,
@@ -266,3 +267,5 @@ export default function Request() {
     </RequestContainer>
   )
 }
+
+export default withHead(Request, '곡 신청');

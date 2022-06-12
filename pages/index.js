@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import styled from '@emotion/styled';
+import { colors, mixin, mq, Rem } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
 import songList from "../components/pages/home/songs";
 import styles from '../styles/Home.module.sass';
-import styled from '@emotion/styled';
-import { colors, mixin, mq, Rem } from '../styles/designSystem';
 
 const Contents = styled.div({
   ...mixin.widthSettings,
@@ -182,4 +182,4 @@ function Home() {
   );
 }
 
-export default withHead(Home, '검색');
+export default withHead(Home, '곡 검색');
