@@ -34,8 +34,12 @@ class MyDocument extends Document {
           />
           <link
             rel="apple-touch-icon"
-            href="/icon-192x192.png"
+            href="/apple-180x180.png"
           />
+          <link
+            rel="apple-touch-startup-image"
+            sizes="1125x2436"
+            href="/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png" />
           <meta
             name='application-name'
             content={APP_NAME}
