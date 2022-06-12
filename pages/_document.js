@@ -1,6 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
+const APP_NAME = '가영아 노래 불러줘'
+
 class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    return await Document.getInitialProps(ctx)
+  }
+
   render() {
     return (
       <Html lang="ko-KR">
@@ -29,6 +35,30 @@ class MyDocument extends Document {
           <link
             rel="apple-touch-icon"
             href="/icon-192x192.png"
+          />
+          <meta
+            name='application-name'
+            content={APP_NAME}
+          />
+          <meta
+            name='apple-mobile-web-app-capable'
+            content='yes'
+          />
+          <meta
+            name='apple-mobile-web-app-status-bar-style'
+            content='black-translucent'
+          />
+          <meta
+            name='apple-mobile-web-app-title'
+            content={APP_NAME}
+          />
+          <meta
+            name='mobile-web-app-capable'
+            content='yes'
+          />
+          <meta
+            name='theme-color'
+            content='#d75d73'
           />
           <meta
             name="theme-color"

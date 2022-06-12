@@ -1,5 +1,5 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "#d75d73",
   "description": "앤가영에게 노래를 신청해 보아요",
   "dir": "ltr",
   "display": "standalone",
@@ -8,7 +8,7 @@
   "scope": "/",
   "short_name": "Gayoung Request",
   "start_url": "/",
-  "theme_color": "#ffffff",
+  "theme_color": "#d75d73",
   "categories": [],
   "screenshots": [],
   "icons": [
