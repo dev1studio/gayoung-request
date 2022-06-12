@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useRouter } from 'next/router';
 import styled from '@emotion/styled';
 import styles from '../../styles/Header.module.sass';
 import { colors, mixin, mq, Rem } from '../../styles/designSystem';
-import LinkButton from '../utilities/linkButton';
 import ToggleNavigation from './toggleNavigation';
 import GlobalNavigation from './globalNavigation';
 
@@ -43,6 +42,8 @@ const HeadingContainer = styled.header(({ open }) => ({
 }));
 
 const Subject = styled.h2({
+  position: 'relative',
+  zIndex: 1,
   backgroundColor: colors.white,
   display: 'inline-block',
   borderRadius: Rem(5),
@@ -50,6 +51,10 @@ const Subject = styled.h2({
   fontWeight: 900,
   fontSize: Rem(20),
   color: colors.accent,
+  [mq.maxTablet]: {
+    padding: `${Rem(2)} ${Rem(5)}`,
+    fontSize: Rem(16),
+  },
 })
 
 const Heading = styled.div({
