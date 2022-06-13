@@ -38,137 +38,141 @@ class MyDocument extends Document {
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="640x1136"
-            href="/splash-640x1136.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="750x1334"
+            media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
             href="/splash-750x1334.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="828x1792"
-            href="/splash-828x1792.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1125x2436"
-            href="/splash-1125x2436.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1136x640"
-            href="/splash-1136x640.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1170x2532"
-            href="/splash-1170x2532.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1242x2208"
-            href="/splash-1242x2208.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1242x2688"
-            href="/splash-1242x2688.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1284x2778"
-            href="/splash-1284x2778.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1334x750"
+            media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
             href="/splash-1334x750.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="1536x2048"
-            href="/splash-1536x2048.png"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/splash-828x1792.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="1620x2160"
-            href="/splash-1620x2160.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1668x2224"
-            href="/splash-1668x2224.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1668x2388"
-            href="/splash-1668x2388.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="1792x828"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
             href="/splash-1792x828.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="2048x1536"
-            href="/splash-2048x1536.png"
+            media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="/splash-1125x2436.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="2048x2732"
-            href="/splash-2048x2732.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="2160x1620"
-            href="/splash-2160x1620.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="2208x1242"
-            href="/splash-2208x1242.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="2224x1668"
-            href="/splash-2224x1668.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="2388x1668"
-            href="/splash-2388x1668.png"
-          />
-          <link
-            rel="apple-touch-startup-image"
-            sizes="2436x1125"
+            media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
             href="/splash-2436x1125.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="2532x1170"
+            media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/splash-640x1136.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="/splash-1136x640.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="/splash-1170x2532.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
             href="/splash-2532x1170.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="2688x1242"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="/splash-1242x2208.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            href="/splash-2208x1242.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="/splash-1242x2688.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
             href="/splash-2688x1242.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="2732x2048"
-            href="/splash-2732x2048.png"
+            media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="/splash-1284x2778.png"
           />
           <link
             rel="apple-touch-startup-image"
-            sizes="2778x1284"
+            media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
             href="/splash-2778x1284.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/splash-1536x2048.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="/splash-2048x1536.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/splash-1620x2160.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="/splash-2160x1620.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/splash-1668x2224.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="/splash-2224x1668.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/splash-1668x2388.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="/splash-2388x1668.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/splash-2048x2732.png"
+          />
+          <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="/splash-2732x2048.png"
           />
           <meta
             name='application-name'
             content={APP_NAME}
+          />
+          <meta
+            name="mobile-web-app-capable"
+            content="yes"
           />
           <meta
             name='apple-mobile-web-app-capable'
@@ -176,7 +180,7 @@ class MyDocument extends Document {
           />
           <meta
             name='apple-mobile-web-app-status-bar-style'
-            content='black-translucent'
+            content='black'
           />
           <meta
             name='apple-mobile-web-app-title'
@@ -189,10 +193,6 @@ class MyDocument extends Document {
           <meta
             name='theme-color'
             content='#d75d73'
-          />
-          <meta
-            name="theme-color"
-            content="#fff"
           />
         </Head>
         <body>
