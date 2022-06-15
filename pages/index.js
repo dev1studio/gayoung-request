@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from 'next/image';
 import styled from '@emotion/styled';
 import { colors, mixin, mq, Rem } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
@@ -66,20 +67,21 @@ const Summary = styled.div({
   display: 'flex',
 })
 
-const Thumbnail = styled.div(({ thumbnail }) => ({
+const Thumbnail = styled.picture({
   width: Rem(120),
   height: Rem(120),
   [mq.minXsmall]: {
     width: Rem(100),
     height: Rem(100),
   },
-  '& i': {
-    display: 'block',
-    width: '100%',
-    height: '100%',
-    background: `url(${thumbnail}) no-repeat 50% 50%/cover`,
-  },
-}))
+})
+
+const Img = styled.img({
+  display: 'block',
+  width: '100%',
+  height: '100%',
+  objectFit: 'contain',
+})
 
 const Info = styled.div({
   ...mixin.col,
@@ -164,8 +166,10 @@ function Home() {
             {filteredList(songs, search).map(song => (
               <li key={song.id}>
                 <Summary>
-                  <Thumbnail thumbnail={song.thumbnail}>
-                    <i />
+                  <Thumbnail>
+                    <source srcSet={`/album-arts/avif${song.thumbnail}.avif?${(Math.random() * 7).toString(7)}`} type="image/avif" />
+                    <source srcSet={`/album-arts/webp${song.thumbnail}.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+                    <Img src={`/album-arts/jpeg${song.thumbnail}.jpeg?${(Math.random() * 7).toString(7)}`} alt="" width="100" height="100" />
                   </Thumbnail>
                   <Info>
                     <strong>{song.title}</strong>
