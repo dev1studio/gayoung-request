@@ -15,16 +15,6 @@ const HeadingContainer = styled.header(({ open }) => ({
   position: 'relative',
   overflow: 'hidden',
   backgroundColor: colors.background,
-  '& > i': {
-    display: 'block',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    paddingTop: '66.66666667%',
-    width: '100%',
-    height: 0,
-    background: `${colors.background} url(/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}) no-repeat 50% 0/contain`,
-  },
   [mq.maxTablet]: {
     '&::before': {
       content: open ? '""' : null,
@@ -39,7 +29,23 @@ const HeadingContainer = styled.header(({ open }) => ({
       transition: 'all .25s linear',
     },
   },
-}));
+}))
+
+const Background = styled.picture({
+  display: 'block',
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  backgroundColor: colors.background,
+})
+
+const Img = styled.img({
+  width: '100%',
+  aspectRatio: '1920 / 1280',
+  objectFit: 'contain',
+  objectPosition: '0 0',
+})
 
 const Subject = styled.h2({
   position: 'relative',
@@ -106,7 +112,11 @@ function Header() {
       className={styles['header-contents']}
       open={open}
     >
-      <i />
+      <Background>
+        <source srcSet={`/4740ae9a-12ea-491b-adf7-1d37ec04cca8.avif?${(Math.random() * 7).toString(7)}`} type="image/avif" />
+        <source srcSet={`/4740ae9a-12ea-491b-adf7-1d37ec04cca8.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+        <Img src={`/4740ae9a-12ea-491b-adf7-1d37ec04cca8.png?${(Math.random() * 7).toString(7)}`} alt="" width="1920" height="1280" />
+      </Background>
       <Contents>
         <Heading><h1>가영아 노래 불러줘~*</h1></Heading>
         <div

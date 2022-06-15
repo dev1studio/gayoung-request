@@ -7,7 +7,7 @@ const songs = [
     singer: "간첩소녀 (Spygirls)",
     album: "아빠컵 엄마컵 애기컵 송 (2018)",
     title: "아빠컵 엄마컵 애기컵 송",
-    thumbnail: `/2490698.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2490698`,
   },
   {
     id: uuidv4(),
@@ -15,7 +15,7 @@ const songs = [
     singer: "간첩소녀 (Spygirls)",
     album: "콜레스테롤 에그 (2017)",
     title: "콜레스테롤 에그",
-    thumbnail: `/2066651.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2066651`,
   },
   {
     id: uuidv4(),
@@ -23,7 +23,7 @@ const songs = [
     singer: "간첩소녀 (Spygirls)",
     album: "Happy Merry Winter Song (2019)",
     title: "Happy Merry Winter Song",
-    thumbnail: `/3994668.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/3994668`,
   },
   {
     id: uuidv4(),
@@ -31,7 +31,7 @@ const songs = [
     singer: "간첩소녀 (Spygirls)",
     album: "그 여름, 징했었지 (2021)",
     title: "그 여름, 징했었지 (Feat. KomZ)",
-    thumbnail: `/6292121.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/6292121`,
   },
   {
     id: uuidv4(),
@@ -39,7 +39,7 @@ const songs = [
     singer: "간첩소녀 (Spygirls)",
     album: "(YouTube 전용)",
     title: "Love Poem for Pengsoo (펭수송)",
-    thumbnail: `/165467780.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/165467780`,
   },
   {
     id: uuidv4(),
@@ -47,7 +47,7 @@ const songs = [
     singer: "간첩소녀 (Spygirls)",
     album: "(YouTube 전용)",
     title: "닌텐도 동물의숲 엔딩송 - 나비보뺏따우 (커버)",
-    thumbnail: `/2ahukewi5.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2ahukewi5`,
   },
   {
     id: uuidv4(),
@@ -55,7 +55,7 @@ const songs = [
     singer: "드림노트 (DreamNote / ドリームノート)",
     album: "Dream:us (2019)",
     title: "하쿠나 마타타 Hakuna Matata",
-    thumbnail: `/2922302.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2922302`,
   },
   {
     id: uuidv4(),
@@ -63,7 +63,7 @@ const songs = [
     singer: "딘 (DEAN)",
     album: "instagram (2017)",
     title: "instagram",
-    thumbnail: `/2296156.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2296156`,
   },
   {
     id: uuidv4(),
@@ -71,7 +71,7 @@ const songs = [
     singer: "러블리즈 (LOVELYZ / LVLZ)",
     album: "Lovelyz8 (2015)",
     title: "Ah-Choo",
-    thumbnail: `/583412.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/583412`,
   },
   {
     id: uuidv4(),
@@ -79,7 +79,7 @@ const songs = [
     singer: "조이 (JOY)",
     album: "슬기로운 의사생활 OST Part 2 (2020)",
     title: "좋은 사람 있으면 소개시켜줘 (원곡 베이시스 Basis)",
-    thumbnail: `/4492194.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4492194`,
   },
   {
     id: uuidv4(),
@@ -87,7 +87,7 @@ const songs = [
     singer: "전미도",
     album: "슬기로운 의사생활 OST Part 11 (2020)",
     title: "사랑하게 될 줄 알았어 (원곡 신효범)",
-    thumbnail: `/4574324.png?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4574324`,
   },
   {
     id: uuidv4(),
@@ -95,7 +95,7 @@ const songs = [
     singer: "마마무 (Mamamoo)",
     album: "White Wind (2019)",
     title: "고고베베 (gogobebe)",
-    thumbnail: `/2927532.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2927532`,
   },
   {
     id: uuidv4(),
@@ -103,7 +103,7 @@ const songs = [
     singer: "마크툽 (Maktub)",
     album: "Red Moon : To You My Light (2019)",
     title: "오늘도 빛나는 너에게 (To You My Light) (Feat. 이라온)",
-    thumbnail: `/3065603.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/3065603`,
   },
   {
     id: uuidv4(),
@@ -111,7 +111,7 @@ const songs = [
     singer: "모모랜드 (MOMOLAND)",
     album: "Fun to The World (2018)",
     title: "BAAM",
-    thumbnail: `/2472152.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2472152`,
   },
   {
     id: uuidv4(),
@@ -119,7 +119,7 @@ const songs = [
     singer: "방탄소년단 (BTS)",
     album: "MAP THE SOUL : PERSONA (2019)",
     title: "작은 것들을 위한 시 (Boy With Luv) (Feat. Halsey)",
-    thumbnail: `/3003472.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/3003472`,
   },
   {
     id: uuidv4(),
@@ -127,7 +127,7 @@ const songs = [
     singer: "방탄소년단 (BTS)",
     album: "Dynamite (2020)",
     title: "Dynamite",
-    thumbnail: `/4820425.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4820425`,
   },
   {
     id: uuidv4(),
@@ -135,7 +135,7 @@ const songs = [
     singer: "방탄소년단 (BTS)",
     album: "BE (2020)",
     title: "Life Goes On",
-    thumbnail: `/5100133.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/5100133`,
   },
   {
     id: uuidv4(),
@@ -143,7 +143,7 @@ const songs = [
     singer: "방탄소년단 (BTS)",
     album: "Butter / Permission to Dance (2021)",
     title: "Permission to Dance",
-    thumbnail: `/6162038.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/6162038`,
   },
   {
     id: uuidv4(),
@@ -151,7 +151,7 @@ const songs = [
     singer: "방탄소년단 (BTS)",
     album: "Butter / Permission to Dance (2021)",
     title: "Butter",
-    thumbnail: `/6162038.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/6162038`,
   },
   {
     id: uuidv4(),
@@ -159,7 +159,7 @@ const songs = [
     singer: "볼빨간사춘기",
     album: "사춘기집Ⅰ 꽃기운 (2019)",
     title: "나만, 봄",
-    thumbnail: `/2979649.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2979649`,
   },
   {
     id: uuidv4(),
@@ -167,7 +167,7 @@ const songs = [
     singer: "볼빨간사춘기",
     album: "Red Diary Page.2 (2018)",
     title: "바람사람",
-    thumbnail: `/2458444.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2458444`,
   },
   {
     id: uuidv4(),
@@ -175,7 +175,7 @@ const songs = [
     singer: "볼빨간사춘기",
     album: "Red Diary Page.2 (2018)",
     title: "여행",
-    thumbnail: `/2458444.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2458444`,
   },
   {
     id: uuidv4(),
@@ -183,7 +183,7 @@ const songs = [
     singer: "볼빨간사춘기",
     album: "사춘기집Ⅱ 꽃 본 나비 (2020)",
     title: "품",
-    thumbnail: `/4552454.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4552454`,
   },
   {
     id: uuidv4(),
@@ -191,7 +191,7 @@ const songs = [
     singer: "블랙핑크 (BLACKPINK)",
     album: "SQUARE UP (2018)",
     title: "뚜두뚜두 (DDU-DU DDU-DU)",
-    thumbnail: `/2466109.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2466109`,
   },
   {
     id: uuidv4(),
@@ -199,7 +199,7 @@ const songs = [
     singer: "사카모토 마야 (Sakamoto Maaya / 坂本眞綾)",
     album: "천공의 에스카플로네 (天空のエスカフローネ) ED (1996)",
     title: "반지 (Ring/指輪/ゆびわ)",
-    thumbnail: `/33bd9eccd324539295b3e7fe1a2fd1dc2eff0c6db693d698f8affba4568981f577411b5c6cc778da1e090461227f6248577df46f728e5125e6f5f70c5df3eda663a087067b972036f34217aa811d553364939cf5db8af85cffa63d6cd7b4f5a7.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/33bd9eccd324539295b3e7fe1a2fd1dc2eff0c6db693d698f8affba4568981f577411b5c6cc778da1e090461227f6248577df46f728e5125e6f5f70c5df3eda663a087067b972036f34217aa811d553364939cf5db8af85cffa63d6cd7b4f5a7`,
   },
   {
     id: uuidv4(),
@@ -207,7 +207,7 @@ const songs = [
     singer: "소녀시대 (GIRLS` GENERATION / SNSD)",
     album: "다시 만난 세계 (2007)",
     title: "다시 만난 세계 (Into The New World)",
-    thumbnail: `/61241.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/61241`,
   },
   {
     id: uuidv4(),
@@ -215,7 +215,7 @@ const songs = [
     singer: "심수봉",
     album: "Original Golden Best (1997)",
     title: "백만송이 장미 (원곡 Aija Kukule)",
-    thumbnail: `/17934.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/17934`,
   },
   {
     id: uuidv4(),
@@ -223,7 +223,7 @@ const songs = [
     singer: "에이핑크 (Apink)",
     album: "PERCENT (2019)",
     title: "%% (응응)",
-    thumbnail: `/2803544.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2803544`,
   },
   {
     id: uuidv4(),
@@ -231,7 +231,7 @@ const songs = [
     singer: "우디 (Woody)",
     album: "이 노래가 클럽에서 나온다면 (2019)",
     title: "이 노래가 클럽에서 나온다면",
-    thumbnail: `/2820741.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2820741`,
   },
   {
     id: uuidv4(),
@@ -239,7 +239,7 @@ const songs = [
     singer: "엔플라잉 (N.Flying)",
     album: "FLY HIGH PROJECT #2 `옥탑방` (2019)",
     title: "옥탑방 (Rooftop)",
-    thumbnail: `/2798714.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2798714`,
   },
   {
     id: uuidv4(),
@@ -247,7 +247,7 @@ const songs = [
     singer: "아이오아이 (I.O.I)",
     album: "소나기 (2017)",
     title: "소나기",
-    thumbnail: `/1775804.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/1775804`,
   },
   {
     id: uuidv4(),
@@ -255,7 +255,7 @@ const songs = [
     singer: "자우림",
     album: "Jaurim, the Wonderland (2000)",
     title: "새",
-    thumbnail: `/2414.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2414`,
   },
   {
     id: uuidv4(),
@@ -263,7 +263,7 @@ const songs = [
     singer: "장윤정",
     album: "어머나 (2004)",
     title: "어머나!",
-    thumbnail: `/28320.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/28320`,
   },
   {
     id: uuidv4(),
@@ -271,7 +271,7 @@ const songs = [
     singer: "재주소년",
     album: "재주소년 (才洲少年) (2003)",
     title: "귤",
-    thumbnail: `/3140.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/3140`,
   },
   {
     id: uuidv4(),
@@ -279,7 +279,7 @@ const songs = [
     singer: "정승환",
     album: "그리고 봄 (2018)",
     title: "눈사람",
-    thumbnail: `/2342202.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2342202`,
   },
   {
     id: uuidv4(),
@@ -287,7 +287,7 @@ const songs = [
     singer: "타루 (Taru)",
     album: "MBC 드라마 `트리플` (2009)",
     title: "초콜릿 (Chocolate)",
-    thumbnail: `/190269.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/190269`,
   },
   {
     id: uuidv4(),
@@ -295,7 +295,7 @@ const songs = [
     singer: "헤이즈 (Heize)",
     album: "/// (너 먹구름 비) (2017)",
     title: "비도 오고 그래서 (Feat. 신용재)",
-    thumbnail: `/2068309.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2068309`,
   },
   {
     id: uuidv4(),
@@ -303,7 +303,7 @@ const songs = [
     singer: "박보영",
     album: "과속스캔들 OST (2008)",
     title: "아마도 그건",
-    thumbnail: `/150496.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/150496`,
   },
   {
     id: uuidv4(),
@@ -311,7 +311,7 @@ const songs = [
     singer: "라라",
     album: "테일즈런너 (Tales Runner) OST PART 1 (2018)",
     title: "바람이 되어",
-    thumbnail: `/20217165.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/20217165`,
   },
   {
     id: uuidv4(),
@@ -319,7 +319,7 @@ const songs = [
     singer: "권진아",
     album: "테일즈런너 (Tales Runner) OST PART 2 (2020)",
     title: "평행선 (Light and Darkness)",
-    thumbnail: `/5159148.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/5159148`,
   },
   {
     id: uuidv4(),
@@ -327,7 +327,7 @@ const songs = [
     singer: "Idina Menzel (English) / 효린 (한국어)",
     album: "겨울왕국 (Frozen) OST (2013)",
     title: "Let It Go",
-    thumbnail: `/411459.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/411459`,
   },
   {
     id: uuidv4(),
@@ -335,7 +335,7 @@ const songs = [
     singer: "예서 (YESEO)",
     album: "보이스2 Part 3 (2018)",
     title: "I Hear You",
-    thumbnail: `/6ece9ae5e8dac4005fd7e11556e2baa5036d66739e4b669c7163976436e65512b75f3f5c3f004707a544bdf0e9d753bf9136b7ac13c58b7149e620e4f9bb9c726072861ccd9aff672b35c3c5af7ac47215bae6046a129d414ec0b206e1ee0b9f14c12dd70a899bb50f2270c2dbb994e0.png?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/6ece9ae5e8dac4005fd7e11556e2baa5036d66739e4b669c7163976436e65512b75f3f5c3f004707a544bdf0e9d753bf9136b7ac13c58b7149e620e4f9bb9c726072861ccd9aff672b35c3c5af7ac47215bae6046a129d414ec0b206e1ee0b9f14c12dd70a899bb50f2270c2dbb994e0`,
   },
   {
     id: uuidv4(),
@@ -343,7 +343,7 @@ const songs = [
     singer: "(여자)아이들, Madison Beer, Jaira Burns, K/DA, League of Legends",
     album: "POP/STARS (2018)",
     title: "POP/STARS",
-    thumbnail: `/2579934.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2579934`,
   },
   {
     id: uuidv4(),
@@ -351,7 +351,7 @@ const songs = [
     singer: "요네즈 켄시 (Kenshi Yonezu / 米津玄師)",
     album: "Lemon (2018)",
     title: "레몬 (Lemon)",
-    thumbnail: `/2420346.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2420346`,
   },
   {
     id: uuidv4(),
@@ -359,7 +359,7 @@ const songs = [
     singer: "제이레빗 (J Rabbit)",
     album: "달을 품은 토끼 Vol 2 (2013)",
     title: "낭만여행",
-    thumbnail: `/391055.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/391055`,
   },
   {
     id: uuidv4(),
@@ -367,7 +367,7 @@ const songs = [
     singer: "-",
     album: "로스트아크 (LostArk) OST: VOL 2 IN-GAME TRACK (2020)",
     title: "테일 오브 플레체 (Tale of Pletze)",
-    thumbnail: `/4927391.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4927391`,
   },
   {
     id: uuidv4(),
@@ -375,7 +375,7 @@ const songs = [
     singer: "레드벨벳 (Red Velvet)",
     album: "Queendom - The 6th Mini Album (2021)",
     title: "Queendom",
-    thumbnail: `/6303210.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/6303210`,
   },
   {
     id: uuidv4(),
@@ -383,7 +383,7 @@ const songs = [
     singer: "Jodi Benson",
     album: "인어공주 (The Little Mermaid) OST (2021)",
     title: "Part of Your World",
-    thumbnail: `/d46d662ae5ec3878d9b6951b11d5d945d8656c1388927494a1af8b62c49be055ebe954a798067dda5b2d22855b58c1cbd8b1ef08f7284a47294c0c68134ca2c8801ea22c0abf10c2e900e0d0cf4cc084a51ce4f3aad1b0c66e36f36fd49cc64543a28bb19a941a66ed03daebc6f4e78a.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/d46d662ae5ec3878d9b6951b11d5d945d8656c1388927494a1af8b62c49be055ebe954a798067dda5b2d22855b58c1cbd8b1ef08f7284a47294c0c68134ca2c8801ea22c0abf10c2e900e0d0cf4cc084a51ce4f3aad1b0c66e36f36fd49cc64543a28bb19a941a66ed03daebc6f4e78a`,
   },
   {
     id: uuidv4(),
@@ -391,7 +391,7 @@ const songs = [
     singer: "악동뮤지션 (악뮤 / AKMU)",
     album: "SUMMER EPISODE (2017)",
     title: "DINOSAUR",
-    thumbnail: `/2113731.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2113731`,
   },
   {
     id: uuidv4(),
@@ -399,7 +399,7 @@ const songs = [
     singer: "미노이 (meenoi)",
     album: "3M (2020)",
     title: "3M",
-    thumbnail: `/4413233.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4413233`,
   },
   {
     id: uuidv4(),
@@ -407,7 +407,7 @@ const songs = [
     singer: "보아 (BoA)",
     album: "Miracle (2002)",
     title: "Valenti (한국어)",
-    thumbnail: `/1677.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/1677`,
   },
   {
     id: uuidv4(),
@@ -415,7 +415,7 @@ const songs = [
     singer: "보아 (BoA)",
     album: "Valenti (2002)",
     title: "Valenti (日本語)",
-    thumbnail: `/56b823c3fb3d09737df8e49f61decf261e8987a20b4222254038102538f03de2446c87fe0dd827395c5bad20cfe3f7db37c7f3b0f63dbc241f5c24a67db1dd79bf7c8320bf8a913eadb5b8c5e1c746eb983f2cba2250c494547cb4ba8017c73b440e218950ba9dcc2072965fd354f4d2.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/56b823c3fb3d09737df8e49f61decf261e8987a20b4222254038102538f03de2446c87fe0dd827395c5bad20cfe3f7db37c7f3b0f63dbc241f5c24a67db1dd79bf7c8320bf8a913eadb5b8c5e1c746eb983f2cba2250c494547cb4ba8017c73b440e218950ba9dcc2072965fd354f4d2`,
   },
   {
     id: uuidv4(),
@@ -423,7 +423,7 @@ const songs = [
     singer: "있지 (ITZY)",
     album: "IT`z Different (2019)",
     title: "달라달라",
-    thumbnail: `/2841538.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2841538`,
   },
   {
     id: uuidv4(),
@@ -431,7 +431,7 @@ const songs = [
     singer: "있지 (ITZY)",
     album: "IT`z ICY (2019)",
     title: "ICY",
-    thumbnail: `/3132878.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/3132878`,
   },
   {
     id: uuidv4(),
@@ -439,7 +439,7 @@ const songs = [
     singer: "오마이걸 (OH MY GIRL)",
     album: "NONSTOP (2020)",
     title: "살짝 설렜어 (Nonstop)",
-    thumbnail: `/4535336.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4535336`,
   },
   {
     id: uuidv4(),
@@ -447,7 +447,7 @@ const songs = [
     singer: "오마이걸 (OH MY GIRL)",
     album: "NONSTOP (2020)",
     title: "Dolphin",
-    thumbnail: `/4535336.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4535336`,
   },
   {
     id: uuidv4(),
@@ -455,7 +455,7 @@ const songs = [
     singer: "(여자)아이들 / (G)I-DLE",
     album: "I am (2018)",
     title: "LATATA",
-    thumbnail: `/2451301.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2451301`,
   },
   {
     id: uuidv4(),
@@ -463,7 +463,7 @@ const songs = [
     singer: "(여자)아이들 / (G)I-DLE",
     album: "I made (2019)",
     title: "Senorita",
-    thumbnail: `/2883457.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2883457`,
   },
   {
     id: uuidv4(),
@@ -471,7 +471,7 @@ const songs = [
     singer: "퍼퓸 (Perfume)",
     album: "JPN (2011)",
     title: "575",
-    thumbnail: `/318765.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/318765`,
   },
   {
     id: uuidv4(),
@@ -479,7 +479,7 @@ const songs = [
     singer: "퍼퓸 (Perfume)",
     album: "Baby Cruising Love/マカロニ (2008)",
     title: "マカロニ (Macaroni)",
-    thumbnail: `/383828.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/383828`,
   },
   {
     id: uuidv4(),
@@ -487,7 +487,7 @@ const songs = [
     singer: "아이즈원 (IZ*ONE)",
     album: "COLOR*IZ (2018)",
     title: "라비앙로즈 (La Vie en Rose)",
-    thumbnail: `/2574294.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2574294`,
   },
   {
     id: uuidv4(),
@@ -495,7 +495,7 @@ const songs = [
     singer: "아이즈원 (IZ*ONE)",
     album: "COLOR*IZ (2018)",
     title: "O` My!",
-    thumbnail: `/2574294.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2574294`,
   },
   {
     id: uuidv4(),
@@ -503,7 +503,7 @@ const songs = [
     singer: "아이즈원 (IZ*ONE)",
     album: "HEART*IZ (2018)",
     title: "비올레타 (Violeta)",
-    thumbnail: `/2977462.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2977462`,
   },
   {
     id: uuidv4(),
@@ -511,7 +511,7 @@ const songs = [
     singer: "트와이스 (TWICE)",
     album: "Summer Nights (2018)",
     title: "Dance The Night Away",
-    thumbnail: `/2480898.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2480898`,
   },
   {
     id: uuidv4(),
@@ -519,7 +519,7 @@ const songs = [
     singer: "트와이스 (TWICE)",
     album: "FANCY YOU (2019)",
     title: "FANCY",
-    thumbnail: `/2480898.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2480898`,
   },
   {
     id: uuidv4(),
@@ -527,7 +527,7 @@ const songs = [
     singer: "트와이스 (TWICE)",
     album: "Eyes wide open (2020)",
     title: "I CAN`T STOP ME",
-    thumbnail: `/3022975.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/3022975`,
   },
   {
     id: uuidv4(),
@@ -535,7 +535,7 @@ const songs = [
     singer: "히나타 메구미 (日向めぐみ / Meg Rock) / 정여진",
     album: "카드캡터체리 (カードキャプターさくら) S1 OP",
     title: "Catch You Catch Me",
-    thumbnail: `/20160213.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/20160213`,
   },
   {
     id: uuidv4(),
@@ -543,7 +543,7 @@ const songs = [
     singer: "chihiro / 김새해",
     album: "카드캡터체리 (カードキャプターさくら) S2 ED",
     title: "Honey",
-    thumbnail: `/20160213.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/20160213`,
   },
   {
     id: uuidv4(),
@@ -551,7 +551,7 @@ const songs = [
     singer: "사카모토 마아야 (坂本真綾) / 양정화",
     album: "카드캡터체리 (カードキャプターさくら) S3 OP",
     title: "플라티나 (Platina / プラチナ)",
-    thumbnail: `/20160213.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/20160213`,
   },
   {
     id: uuidv4(),
@@ -559,7 +559,7 @@ const songs = [
     singer: "여자친구 (GFRIEND)",
     album: "The 6th Mini Album `Time for the moon night` (2018)",
     title: "밤 (Time for the moon night)",
-    thumbnail: `/2450804.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2450804`,
   },
   {
     id: uuidv4(),
@@ -567,7 +567,7 @@ const songs = [
     singer: "여자친구 (GFRIEND)",
     album: "回:LABYRINTH (2020)",
     title: "From Me",
-    thumbnail: `/4436055.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4436055`,
   },
   {
     id: uuidv4(),
@@ -575,7 +575,7 @@ const songs = [
     singer: "여자친구 (GFRIEND)",
     album: "回:Walpurgis Night (2020)",
     title: "Apple",
-    thumbnail: `/5074359.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/5074359`,
   },
   {
     id: uuidv4(),
@@ -583,7 +583,7 @@ const songs = [
     singer: "선우정아 (Sunwoojunga)",
     album: "고양이 (2017)",
     title: "고양이 C A T (feat. 아이유 IU)",
-    thumbnail: `/20138513.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/20138513`,
   },
   {
     id: uuidv4(),
@@ -591,7 +591,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "꿈빛 파티시엘 TVA S1 OP",
     title: "내 꿈은 파티시엘",
-    thumbnail: `/bgQIzPnPI88.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/bgQIzPnPI88`,
   },
   {
     id: uuidv4(),
@@ -599,7 +599,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "Real (2010)",
     title: "좋은 날",
-    thumbnail: `/184117.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/184117`,
   },
   {
     id: uuidv4(),
@@ -607,7 +607,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "Real (2010)",
     title: "첫 이별 그날 밤",
-    thumbnail: `/184117.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/184117`,
   },
   {
     id: uuidv4(),
@@ -615,7 +615,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "최고의 사랑 OST Part 4 (2011)",
     title: "내 손을 잡아",
-    thumbnail: `/196847.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/196847`,
   },
   {
     id: uuidv4(),
@@ -623,7 +623,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "3집 Modern Times – Epilogue (2013)",
     title: "금요일에 만나요 (Feat. 장이정 of HISTORY)",
-    thumbnail: `/408980.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/408980`,
   },
   {
     id: uuidv4(),
@@ -631,7 +631,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "꽃갈피 (2014)",
     title: "너의 의미 (Feat. 김창완)",
-    thumbnail: `/429818.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/429818`,
   },
   {
     id: uuidv4(),
@@ -639,7 +639,7 @@ const songs = [
     singer: "아이유 (IU), 울랄라세션 (ULALA SESSION)",
     album: "애타는 마음 (2014)",
     title: "애타는 마음",
-    thumbnail: `/437030.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/437030`,
   },
   {
     id: uuidv4(),
@@ -647,7 +647,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "마음 (2015)",
     title: "마음",
-    thumbnail: `/542030.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/542030`,
   },
   {
     id: uuidv4(),
@@ -655,7 +655,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "CHAT-SHIRE (2015)",
     title: "무릎",
-    thumbnail: `/592471.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/592471`,
   },
   {
     id: uuidv4(),
@@ -663,7 +663,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "CHAT-SHIRE (2015)",
     title: "푸르던",
-    thumbnail: `/592471.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/592471`,
   },
   {
     id: uuidv4(),
@@ -671,7 +671,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "밤편지 (2017)",
     title: "밤편지",
-    thumbnail: `/1855408.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/1855408`,
   },
   {
     id: uuidv4(),
@@ -679,7 +679,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "삐삐 (2018)",
     title: "삐삐 (BBIBBI)",
-    thumbnail: `/2559408.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/2559408`,
   },
   {
     id: uuidv4(),
@@ -687,7 +687,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "Love poem (2019)",
     title: "Blueming",
-    thumbnail: `/3399860.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/3399860`,
   },
   {
     id: uuidv4(),
@@ -695,7 +695,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "에잇 (2020)",
     title: "에잇 eight (Prod.&Feat. SUGA of BTS)",
-    thumbnail: `/4550593.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/4550593`,
   },
   {
     id: uuidv4(),
@@ -703,7 +703,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "5th Album `LILAC` (2021)",
     title: "Celebrity",
-    thumbnail: `/5211473.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/5211473`,
   },
   {
     id: uuidv4(),
@@ -711,7 +711,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "5th Album `LILAC` (2021)",
     title: "봄 안녕 봄",
-    thumbnail: `/5211473.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/5211473`,
   },
   {
     id: uuidv4(),
@@ -719,7 +719,7 @@ const songs = [
     singer: "아이유 (IU)",
     album: "strawberry moon (2021)",
     title: "strawberry moon",
-    thumbnail: `/6520837.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/6520837`,
   },
   {
     id: uuidv4(),
@@ -727,7 +727,7 @@ const songs = [
     singer: "체리비 (CherryB)",
     album: "런 온 (Run On) OST Part 11 (2021)",
     title: "살랑살랑",
-    thumbnail: `/5202344.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/5202344`,
   },
   {
     id: uuidv4(),
@@ -735,7 +735,7 @@ const songs = [
     singer: "KOKIA",
     album: "フクロウ ～フクロウが知らせる客が来たと～ (2017)",
     title: "부엉이 (Fukurou / フクロウ)",
-    thumbnail: `/618SA8CT1-LSS500.jpg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/618SA8CT1-LSS500`,
   },
   {
     id: uuidv4(),
@@ -743,7 +743,7 @@ const songs = [
     singer: "Sarah McLachlan",
     album: "토이스토리 (Toy Story) 2 OST (1999)",
     title: "When She Loved Me",
-    thumbnail: `/12758961.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/12758961`,
   },
   {
     id: uuidv4(),
@@ -751,7 +751,7 @@ const songs = [
     singer: "김정은",
     album: "가문의 영광 OST (2002)",
     title: "나 항상 그대를 (원곡 이선희)",
-    thumbnail: `/22939.jpeg?${(Math.random() * 7).toString(7)}`,
+    thumbnail: `/22939`,
   },
 ];
 
