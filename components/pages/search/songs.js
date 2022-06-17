@@ -45,7 +45,7 @@ const songs = [
     id: uuidv4(),
     name: "스파이걸스 간첩소녀 spygirls 닌텐도 동물의숲 동숲 나비보뺏따우",
     singer: "간첩소녀 (Spygirls)",
-    album: "(YouTube 전용)",
+    album: "(Tik Tok 전용)",
     title: "닌텐도 동물의숲 엔딩송 - 나비보뺏따우 (커버)",
     thumbnail: `/2ahukewi5`,
   },
@@ -99,7 +99,7 @@ const songs = [
   },
   {
     id: uuidv4(),
-    name: "마크툽 maktub 오늘도빛나는너에게 to you my light 이라온",
+    name: "마크툽 maktub 오늘도빛나는너에게 to you my light",
     singer: "마크툽 (Maktub)",
     album: "Red Moon : To You My Light (2019)",
     title: "오늘도 빛나는 너에게 (To You My Light) (Feat. 이라온)",
@@ -291,7 +291,7 @@ const songs = [
   },
   {
     id: uuidv4(),
-    name: "헤이즈 heize 해이즈 비도오고그래서 신용재",
+    name: "헤이즈 heize 해이즈 비도오고그래서",
     singer: "헤이즈 (Heize)",
     album: "/// (너 먹구름 비) (2017)",
     title: "비도 오고 그래서 (Feat. 신용재)",
@@ -587,7 +587,7 @@ const songs = [
   },
   {
     id: uuidv4(),
-    name: "아이유 iu 꿈빛파티시엘",
+    name: "아이유 iu 꿈빛파티시엘 내꿈은파티시엘",
     singer: "아이유 (IU)",
     album: "꿈빛 파티시엘 TVA S1 OP",
     title: "내 꿈은 파티시엘",
@@ -739,7 +739,7 @@ const songs = [
   },
   {
     id: uuidv4(),
-    name: "토이스토리 when she loved me",
+    name: "월트디즈니 토이스토리 when she loved me",
     singer: "Sarah McLachlan",
     album: "토이스토리 (Toy Story) 2 OST (1999)",
     title: "When She Loved Me",

@@ -88,12 +88,12 @@ class MyDocument extends Document {
           />
           <link
             rel="apple-touch-startup-image"
-            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
             href="/splash-1242x2208.png"
           />
           <link
             rel="apple-touch-startup-image"
-            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
             href="/splash-2208x1242.png"
           />
           <link

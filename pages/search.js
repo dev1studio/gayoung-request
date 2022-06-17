@@ -186,4 +186,4 @@ function Home() {
   );
 }
 
-export default withHead(Home, '곡 검색');
+export default withHead(Search, '곡 검색');

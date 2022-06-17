@@ -161,6 +161,16 @@ function Header() {
           </>
           : null
         }
+        {router.pathname === '/welcome' ?
+          <>
+            <Subject>어서와 여기는 처음이지?</Subject>
+            <Notice>
+              <p>여기는 <strong>가영</strong>이가 부를 수 있는 곡을 검색하거나 신청할 수 있는 곳입니다.</p>
+              <p>좋은 아이디어도 받아요! 제안 주세요~</p>
+            </Notice>
+          </>
+          : null
+        }
       </Contents>
     </HeadingContainer>
   )

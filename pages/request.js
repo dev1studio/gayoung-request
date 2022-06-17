@@ -6,10 +6,6 @@ import styles from '../styles/Request.module.sass';
 import { colors, mixin, mq, Rem } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
 
-const Container = styled.div({
-  width: '100%',
-})
-
 const RequestContainer = styled.main({
   backgroundColor: colors.white,
   [mq.minXlarge]: {

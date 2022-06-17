@@ -1,0 +1,14 @@
+@import './designSystem.sass'
+
+.welcome-contents
+  background: $color-white
+
+  +mq(minXlarge)
+    position: relative
+    top: rem(-200)
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12)
+
+  h2
+    font-size: rem(32)
+    font-family: 'Cute Font', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', cursive
+    color: $color-accent
