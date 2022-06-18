@@ -132,7 +132,7 @@ function Header() {
             setOpen={setOpen}
           />
         </div>
-        {router.pathname === '/' ?
+        {router.pathname === '/' &&
           <>
             <Subject>곡 검색 only ON AIR</Subject>
             <Notice>
@@ -147,9 +147,8 @@ function Header() {
               <p lang='ja'>J-pop/Anime OSTは英文と日本語両方に対応しています。（曲数が多くありません。すみません。）</p>
             </Notice>
           </>
-          : null
         }
-        {router.pathname === '/request' ?
+        {router.pathname === '/request' &&
           <>
             <Subject>곡 신청</Subject>
             <Notice>
@@ -159,9 +158,8 @@ function Header() {
               <p lang='ja'>韓国で発売されていない曲のMRは入手困難な場合があります。</p>
             </Notice>
           </>
-          : null
         }
-        {router.pathname === '/welcome' ?
+        {router.pathname === '/welcome' &&
           <>
             <Subject>어서와 여기는 처음이지?</Subject>
             <Notice>
@@ -169,7 +167,15 @@ function Header() {
               <p>좋은 아이디어도 받아요! 제안 주세요~</p>
             </Notice>
           </>
-          : null
+        }
+        {router.pathname === '/ideas' &&
+          <>
+            <Subject>앱 개선 아이디어</Subject>
+            <Notice>
+              <p>아이디어를 제안해 주세요.</p>
+              <p><strong>끌로에가 제작이 가능한 경우</strong> 제안한 내용이 반영되어요.</p>
+            </Notice>
+          </>
         }
       </Contents>
     </HeadingContainer>
