@@ -7,7 +7,7 @@
   "orientation": "portrait",
   "scope": "/",
   "short_name": "가영아 노래 불러줘",
-  "start_url": "/",
+  "start_url": "/search",
   "theme_color": "#d75d73",
   "categories": ["유튜브", "앤가영", "유튜브", "신청곡"],
   "screenshots": [],

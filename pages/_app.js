@@ -25,12 +25,6 @@ function MyApp({ Component, pageProps }) {
           }
         );
       });
-      if (window.matchMedia('(display-mode: standalone)').matches) {
-        console.log('display-mode is standalone');
-      }
-      if (window.navigator.standalone === true) {
-        console.log('display-mode is standalone');
-      }
     }
   }, []);
 

@@ -9,6 +9,47 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12)
 
   h2
-    font-size: rem(32)
+    font-size: rem(38)
     font-family: 'Cute Font', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Nanum Gothic', 'Malgun Gothic', cursive
+    line-height: 1
     color: $color-accent
+
+  h3
+    margin-top: rem(50)
+    font-size: rem(20)
+
+  .guide
+    &-list
+      display: flex
+      flex-wrap: wrap
+      margin-top: rem(20)
+
+      +mq(maxTablet)
+        flex-direction: column
+
+      +mq(minXlarge)
+        padding: 0 rem(50)
+
+    &-item
+      display: flex
+      flex-direction: column
+      padding: 0 rem(20)
+
+      +mq(minXsmall)
+        width: 33.33%
+
+      picture
+        width: 100%
+
+      p
+        padding-top: rem(20)
+        font-weight: 700
+        font-size: rem(18)
+        text-align: center
+
+        +mq(maxTablet)
+          padding-bottom: rem(50)
+
+        strong
+          font-weight: 900
+          color: $color-background

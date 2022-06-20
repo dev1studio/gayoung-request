@@ -45,6 +45,7 @@ const Img = styled.img({
   aspectRatio: '1920 / 1280',
   objectFit: 'contain',
   objectPosition: '0 0',
+  ...mixin.imageRendering,
 })
 
 const Subject = styled.h2({
@@ -65,9 +66,6 @@ const Subject = styled.h2({
 
 const Heading = styled.div({
   paddingTop: Rem(100),
-  [mq.maxLarge]: {
-    paddingTop: Rem(50),
-  },
   '& h1': {
     fontSize: Rem(70),
     [mq.maxLarge]: {
@@ -132,7 +130,7 @@ function Header() {
             setOpen={setOpen}
           />
         </div>
-        {router.pathname === '/' &&
+        {router.pathname === '/search' &&
           <>
             <Subject>곡 검색 only ON AIR</Subject>
             <Notice>
@@ -148,7 +146,7 @@ function Header() {
             </Notice>
           </>
         }
-        {router.pathname === '/request' &&
+        {/* {router.pathname === '/request' &&
           <>
             <Subject>곡 신청</Subject>
             <Notice>
@@ -158,12 +156,12 @@ function Header() {
               <p lang='ja'>韓国で発売されていない曲のMRは入手困難な場合があります。</p>
             </Notice>
           </>
-        }
-        {router.pathname === '/welcome' &&
+        } */}
+        {router.pathname === '/' &&
           <>
-            <Subject>어서와 여기는 처음이지?</Subject>
+            <Subject>어서와 이 곳은 처음이지?</Subject>
             <Notice>
-              <p>여기는 <strong>가영</strong>이가 부를 수 있는 곡을 검색하거나 신청할 수 있는 곳입니다.</p>
+              <p>이 곳은 <strong>가영</strong>이가 부를 수 있는 곡을 검색하거나 신청할 수 있는 곳입니다.</p>
               <p>좋은 아이디어도 받아요! 제안 주세요~</p>
             </Notice>
           </>

@@ -21,7 +21,7 @@ function Footer() {
   return (
     <FooterContainer className={styles['footer-contents']}>
       <Contents>
-        {router.pathname === '/' ?
+        {router.pathname === '/search' ?
           <>
             <p>이 페이지는 앤가영이 부를 수 있는 곡을 안내하는 곳입니다.</p>
             <p>곡 신청은 라방에서 앤가영에게 직접 해주세요.</p>
