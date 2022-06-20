@@ -286,10 +286,10 @@ function Request() {
             <p className={styles['notice']}>이미지, 파일 등 첨부는 안됩니다. 첨부를 원하시는 경우 지메일로 보내주세요. 1157iamari 입니다.</p>
             <p className={styles['notice']}>Github 계정이 있으신 경우 저장소의 <LinkButton href={`https://github.com/dev1studio/gayoung-request/issues`}>Issues</LinkButton>로 남겨주셔도 됩니다.</p>
             <p className={styles['notice']}>1:1 문의를 하실 수도 있어요. <LinkButton href={`https://open.kakao.com/o/s8NzuTle`}>여기</LinkButton>를 눌러주세요. <strong>성적인 농담, 욕설 등의 발언은 신고 대상입니다. 유의해 주세요.</strong></p>
-            <p className={styles['notice']}>`<strong>아이디어 제한하기</strong>` 버튼은 <strong>1번만</strong> 눌러주세요. 여러번 누르면 제대로 신청되지 않을 수 있습니다.</p>
+            <p className={styles['notice']}>`<strong>아이디어 제안하기</strong>` 버튼은 <strong>1번만</strong> 눌러주세요. 여러번 누르면 제대로 신청되지 않을 수 있습니다.</p>
             <ButtonContainer>
               <SubmitButton>
-                아이디어 제한하기
+                아이디어 제안하기
               </SubmitButton>
             </ButtonContainer>
           </fieldset>
