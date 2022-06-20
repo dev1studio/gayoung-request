@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Image from 'next/image';
 import styled from '@emotion/styled';
 import { colors, mixin, mq, Rem } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
 import songList from "../components/pages/search/songs";
-import styles from '../styles/Home.module.sass';
+import styles from '../styles/Search.module.sass';
 
 const Contents = styled.div({
   ...mixin.widthSettings,
@@ -31,7 +30,7 @@ const SearchForm = styled.div({
   backgroundColor: colors.white,
 })
 
-const Search = styled.input({
+const SearchField = styled.input({
   display: 'block',
   margin: `0 ${Rem(-15)}`,
   padding: `0 ${Rem(20)}`,
@@ -81,6 +80,7 @@ const Img = styled.img({
   width: '100%',
   height: '100%',
   objectFit: 'contain',
+  ...mixin.imageRendering,
 })
 
 const Info = styled.div({
@@ -131,7 +131,7 @@ const Album = styled.small({
   },
 });
 
-function Home() {
+function Search() {
   const [songs, setSongs] = useState([]);
   const [search, setSearch] = useState(null);
 
@@ -157,7 +157,7 @@ function Home() {
     <SearchContainer>
       <Contents className={styles['search-contents']}>
         <SearchForm>
-          <Search
+          <SearchField
             type="search"
             placeholder="찾는 곡을 입력하세요"
             onChange={e => setSearch(e.target.value)}

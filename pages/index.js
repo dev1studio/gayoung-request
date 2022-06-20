@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Image from 'next/image';
+import React from "react";
 import styled from '@emotion/styled';
+import styles from '../styles/Welcome.module.sass';
 import { colors, mixin, mq, Rem } from '../styles/designSystem';
 import withHead from '../components/utilities/withHead';
-import songList from "../components/pages/search/songs";
-import styles from '../styles/Home.module.sass';
 
-const Contents = styled.div({
-  ...mixin.widthSettings,
-})
-
-const SearchContainer = styled.main({
+const WelcomeContainer = styled.main({
   backgroundColor: colors.white,
   [mq.minXlarge]: {
     position: 'relative',
@@ -27,163 +21,105 @@ const SearchContainer = styled.main({
   },
 })
 
-const SearchForm = styled.div({
-  backgroundColor: colors.white,
-})
-
-const Search = styled.input({
-  display: 'block',
-  margin: `0 ${Rem(-15)}`,
-  padding: `0 ${Rem(20)}`,
-  width: `calc(100% + ${Rem(30)})`,
-  height: Rem(100),
-  fontSize: Rem(50),
-  [mq.maxLarge]: {
-    height: '7.9vw',
-    fontSize: '3.9vw',
-  },
-  [mq.maxTablet]: {
-    height: Rem(60),
-    fontSize: Rem(30),
-  },
-})
-
-const List = styled.ul({
-  padding: `${Rem(20)} 0`,
+const Contents = styled.div({
+  ...mixin.widthSettings,
+  padding: Rem(20),
   [mq.minXlarge]: {
-    padding: `${Rem(50)} 0`,
-  },
-  '& li': {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    position: 'relative',
-    padding: `${Rem(10)} 0`,
-    fontSize: Rem(20),
+    padding: Rem(50),
   },
 })
 
-const Summary = styled.div({
-  display: 'flex',
-})
-
-const Thumbnail = styled.picture({
-  width: Rem(120),
-  height: Rem(120),
-  [mq.minXsmall]: {
-    width: Rem(100),
-    height: Rem(100),
-  },
-})
+const Thumbnail = styled.picture()
 
 const Img = styled.img({
   display: 'block',
   width: '100%',
-  height: '100%',
   objectFit: 'contain',
+  aspectRatio: '720 / 1560',
+  height: 'auto',
+  ...mixin.imageRendering,
 })
 
-const Info = styled.div({
-  ...mixin.col,
-  display: 'flex',
-  flexDirection: 'column',
-  paddingLeft: Rem(20),
-  [mq.minXlarge]: {
-    justifyContent: 'center',
-  },
-  '& strong': {
-    paddingBottom: Rem(5),
-    fontSize: Rem(16),
-    [mq.maxTablet]: {
-      lineHeight: '1.3',
-    },
-    [mq.minXsmall]: {
-      fontSize: Rem(22),
-    },
-    [mq.minXlarge]: {
-      paddingBottom: Rem(15),
-    },
-  },
-  '& em': {
-    fontSize: Rem(14),
-    [mq.maxTablet]: {
-      lineHeight: '1.3',
-    },
-    [mq.minXsmall]: {
-      fontSize: Rem(18),
-    },
-  },
-})
-
-const Album = styled.small({
-  fontSize: Rem(12),
-  fontFamily: "'Noto Serif KR', serif",
-  [mq.minXsmall]: {
-    fontSize: Rem(16),
-  },
-  [mq.maxXsmall]: {
-    position: 'absolute',
-    bottom: Rem(15),
-    left: Rem(120),
-  },
-  [mq.maxTablet]: {
-    left: Rem(140)
-  },
-});
-
-function Home() {
-  const [songs, setSongs] = useState([]);
-  const [search, setSearch] = useState(null);
-
-  useEffect(() => {
-    getSongs(songList);
-  }, []);
-
-  const getSongs = songList => {
-    setSongs(songList);
-  };
-
-  const bySearch = (song, search) => {
-    if (search) {
-      return song.name.toLowerCase().includes(search.toLowerCase());
-    } else return song;
-  };
-
-  const filteredList = (songs, search) => {
-    return songs.filter(song => bySearch(song, search));
-  };
-
+function Welcome() {
   return (
-    <SearchContainer>
-      <Contents className={styles['search-contents']}>
-        <SearchForm>
-          <Search
-            type="search"
-            placeholder="찾는 곡을 입력하세요"
-            onChange={e => setSearch(e.target.value)}
-          />
-          <List>
-            {filteredList(songs, search).map(song => (
-              <li key={song.id}>
-                <Summary>
-                  <Thumbnail>
-                    <source srcSet={`/album-arts/avif${song.thumbnail}.avif?${(Math.random() * 7).toString(7)}`} type="image/avif" />
-                    <source srcSet={`/album-arts/webp${song.thumbnail}.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
-                    <Img src={`/album-arts/jpeg${song.thumbnail}.jpeg?${(Math.random() * 7).toString(7)}`} alt="" width="100" height="100" />
-                  </Thumbnail>
-                  <Info>
-                    <strong>{song.title}</strong>
-                    <em>{song.singer}</em>
-                  </Info>
-                </Summary>
-                <Album>{song.album}</Album>
-              </li>
-            ))}
-          </List>
-        </SearchForm>
+    <WelcomeContainer>
+      <Contents className={styles['welcome-contents']}>
+        <h2>‘가영아 노래 불러줘’ 앱 설치 방법</h2>
+        <h3>iOS & iPadOS (for Safari)</h3>
+        <div className={styles['guide-list']}>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios0.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios0.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p>공유하기 버튼을 눌러주세요</p>
+          </div>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios1.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios1.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p><strong>`홈 화면에 추가`</strong> 버튼을 눌러주세요</p>
+          </div>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios2.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios2.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p>상단 오른쪽의 <strong>`추가`</strong> 버튼을 눌러주세요</p>
+          </div>
+        </div>
+        <h3>Android (for Chrome)</h3>
+        <div className={styles['guide-list']}>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios0.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios0.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p>공유하기 버튼을 눌러주세요</p>
+          </div>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios0.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios0.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p>`홈 화면에 추가` 버튼을 눌러주세요</p>
+          </div>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios0.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios0.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p>상단 오른쪽의 `추가` 버튼을 눌러주세요</p>
+          </div>
+        </div>
+        <h3>macOS & Windows (for Chrome)</h3>
+        <div className={styles['guide-list']}>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios0.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios0.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p>공유하기 버튼을 눌러주세요</p>
+          </div>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios0.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios0.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p>`홈 화면에 추가` 버튼을 눌러주세요</p>
+          </div>
+          <div className={styles['guide-item']}>
+            <Thumbnail>
+              <source srcSet={`/welcome/ios0.webp?${(Math.random() * 7).toString(7)}`} type="image/webp" />
+              <Img src={`/welcome/ios0.png?${(Math.random() * 7).toString(7)}`} alt="" width="720" height="1560" />
+            </Thumbnail>
+            <p>상단 오른쪽의 `추가` 버튼을 눌러주세요</p>
+          </div>
+        </div>
       </Contents>
-    </SearchContainer>
-  );
+    </WelcomeContainer>
+  )
 }
 
-export default withHead(Home, '곡 검색');
+export default withHead(Welcome, '어서와 여기는 처음이지?');
