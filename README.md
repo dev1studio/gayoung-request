@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# (가제) 가영아 노래 불러줘
 
-## Getting Started
+`가영아 노래 불러줘`는 간첩소녀의 앤가영과 앤가영의 동명 채널을 이용하는 시청자들을 위해 제작된 웹 사이트이자 서비스 앱입니다.
 
-First, run the development server:
+앤가영이 만든 공식 서비스가 아닌 팬이 만든 서비스이지만, 서비스 지속이 불가능한 경우 앤가영에게 알린 이후 서비스 종료합니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## App.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`Next.js`를 이용하여 제작된 `PWA`앱입니다.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+iOS, iPadOS (Safari) 그리고 Android (Chrome)에서 앱 설치가 가능합니다.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+macOS와 Windows의 Chrome에서도 설치해서 쓸 수 있습니다.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Vercel
 
-## Learn More
+Vercel의 `Next.js`프레임워크로 작성되었고 `Vercel.com`으로 호스팅되고 있습니다.
 
-To learn more about Next.js, take a look at the following resources:
+## 버그 신고 및 제안
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Github 상단 메뉴의 `Issues`를 이용해 주세요.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 저작권
 
-## Deploy on Vercel
+오픈소스로 작성된 부분을 제외한 모든 코드 및 디자인에 대한 저작권은 끌로에(O612)에게 있습니다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+앤가영이 삽입된 이미지는 앤가영에게 초상권 및 저작권이 있습니다.
