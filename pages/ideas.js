@@ -218,7 +218,7 @@ function Request() {
         >
           <fieldset>
             <legend>아이디어 제안 양식</legend>
-            <FormGroup>
+            {/* <FormGroup>
               <FormLabel htmlFor='user'>유튜브 이름<i mark='&#x204E;' /></FormLabel>
               <FormControl>
                 <FormControlInput
@@ -261,13 +261,13 @@ function Request() {
                   {errors.email && <Error id='error-email'>이메일 형식에 맞춰서 작성해 주세요</Error>}
                 </Status>
               </FormControl>
-            </FormGroup>
+            </FormGroup> */}
             <FormGroup>
               <FormLabel htmlFor='request'>내용 입력<i mark='&#x204E;' /></FormLabel>
               <FormControl>
                 <FormControlTextarea
                   id={'request'}
-                  placeholder={'앱범명 또는 관련 영상링크 URL 입력'}
+                  placeholder={'내용을 넣어주세요'}
                   aria-invalid={errors.request ? 'true' : null}
                   aria-describedby={errors.request ? 'error-request' : null}
                   isError={errors.request ? true : false}
@@ -282,10 +282,11 @@ function Request() {
                 </Status>
               </FormControl>
             </FormGroup>
-            <p className={styles['notice']}>이메일은 필수 아닙니다. <strong>답장을 원하는 경우</strong> 입력해 주세요.</p>
-            <p className={styles['notice']}>이미지, 파일 등 첨부는 안됩니다. 첨부를 원하시는 경우 지메일로 보내주세요. 1157iamari 입니다.</p>
-            <p className={styles['notice']}>Github 계정이 있으신 경우 저장소의 <LinkButton href={`https://github.com/dev1studio/gayoung-request/issues`}>Issues</LinkButton>로 남겨주셔도 됩니다.</p>
-            <p className={styles['notice']}>1:1 문의를 하실 수도 있어요. <LinkButton href={`https://open.kakao.com/o/s8NzuTle`}>여기</LinkButton>를 눌러주세요. <strong>성적인 농담, 욕설 등의 발언은 신고 대상입니다. 유의해 주세요.</strong></p>
+            {/* <p className={styles['notice']}>이메일은 필수 아닙니다. <strong>답장을 원하는 경우</strong> 입력해 주세요.</p> */}
+            <p className={styles['notice']}>이미지, 파일 등 첨부는 안됩니다.</p>
+            <p className={styles['notice']}><strong>올려주신 내용은 앤가영에게 전달되지 않습니다.</strong></p>
+            {/* <p className={styles['notice']}>Github 계정이 있으신 경우 저장소의 <LinkButton href={`https://github.com/dev1studio/gayoung-request/issues`}>Issues</LinkButton>로 남겨주셔도 됩니다.</p>
+            <p className={styles['notice']}>1:1 문의를 하실 수도 있어요. <LinkButton href={`https://open.kakao.com/o/s8NzuTle`}>여기</LinkButton>를 눌러주세요. <strong>성적인 농담, 욕설 등의 발언은 신고 대상입니다. 유의해 주세요.</strong></p> */}
             <p className={styles['notice']}>`<strong>아이디어 제안하기</strong>` 버튼은 <strong>1번만</strong> 눌러주세요. 여러번 누르면 제대로 신청되지 않을 수 있습니다.</p>
             <ButtonContainer>
               <SubmitButton>
